@@ -1,7 +1,7 @@
 # Welcome to Jekyll!
 title: Online Resume
 url:
-baseurl: ""
+baseurl: "cv"
 
 # Sass setting
 sass/style: compressed
