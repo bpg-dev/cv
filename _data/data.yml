@@ -12,7 +12,7 @@ basic:
 contact:
   location: Toronto, Canada # location, text or markdown link syntax
   email: inbox.6y5ib@passmail.net # email address
-  phone: +1 (416) 720-0726 # phone number, the format is "+[Country Code] [Area Code (if applicable)] [Local Phone Number]"
+  # phone: +1 (416) 720-0726 # phone number, the format is "+[Country Code] [Area Code (if applicable)] [Local Phone Number]"
   # website: example.com # site link without schema, like example.com, will automatically prepend "https://"
   github: https://github.com/bpg
   linkedin: https://linkedin.com/in/pboldyrev
