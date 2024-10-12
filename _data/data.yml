@@ -55,9 +55,15 @@ experience:
       Arctic Wolf Networks is a cybersecurity company that provides managed detection and response services. 
       I was a part of the team that develops and maintains the Arctic Wolf Agent software.
       - Designed and implemented CI/CD pipeline for Arctic Wolf Agent endpoint components (Golang / C, GH Actions, Docker)
-      - Spearheaded migration of stateful AWS EC2 backend stack to EKS using IaC for defining and managing AWS and K8S resources (CFN, ECR, EKS, S3, SSM, PosgreSQL RDS, ElastiCache, and many other managed AWS services).
-      - Designed and implemented end-to-end user acceptance testing framework allowing developers to test endpoint software components on variety of operation systems (Windows servers / desktops, number of Linux distros), fully interacting with backend services. This framework virtually eliminated manual efforts in acceptance testing and reduced time spent on a new endpoint release qualification from weeks to days (Terraform, Packer, vSphere / AWS EC2, Golang).
-      - Performed maintenance tasks, performance improvements and optimizations in the current backend stack, which allowed continuous growth of the client base. Actively participated in DevOps rotation, improving and adapting operation procedures to constantly changing software components.
+      - Spearheaded migration of stateful AWS EC2 backend stack to EKS using IaC for defining and managing AWS and K8S resources 
+      (CFN, ECR, EKS, S3, SSM, PosgreSQL RDS, ElastiCache, and many other managed AWS services).
+      - Designed and implemented end-to-end user acceptance testing framework allowing developers to test endpoint software components
+       on variety of operation systems (Windows servers / desktops, number of Linux distros), fully interacting with backend services. 
+       This framework virtually eliminated manual efforts in acceptance testing and reduced time spent on a new endpoint release 
+       qualification from weeks to days (Terraform, Packer, vSphere / AWS EC2, Golang).
+      - Performed maintenance tasks, performance improvements and optimizations in the current backend stack, which allowed
+       continuous growth of the client base. Actively participated in DevOps rotation, improving and adapting operation procedures to
+        constantly changing software components.
       - Acted as a mentor for junior developers, providing guidance and support in their daily tasks and career growth.
       
   - company: Street Contxt
@@ -68,8 +74,10 @@ experience:
     location: Toronto
     description: |
       Street Contxt is a financial services platform that provides a suite of tools for financial professionals to manage and share information.
-      - Designed and implemented events streaming microservices for the Street Contxt platform: forwarded email detection, external event reporting, and others (Scala, Akka Streams, Kinesis).
-      - Migrated 20+ microservices and libraries from Scala 2.11/12 to 2.13, rolled out automated dependencies update pipeline for Scala projects, automated and improved many aspects of internal release management process: release notes drafting, release promotion and deployment (SBT, CircleCI, GitHub Actions).
+      - Designed and implemented events streaming microservices for the Street Contxt platform: forwarded email detection, 
+      external event reporting, and others (Scala, Akka Streams, Kinesis).
+      - Migrated 20+ microservices and libraries from Scala 2.11/12 to 2.13, rolled out automated dependencies update pipeline 
+      for Scala projects, automated and improved many aspects of internal release management process: release notes drafting, release promotion and deployment (SBT, CircleCI, GitHub Actions).
       - Supported legacy J2EE application by adding features and fixing issues (Java, PostgreSQL, JOOQ).
 
   - company: Kooltra
@@ -80,9 +88,12 @@ experience:
     location: Toronto
     description: |
       Kooltra is a cloud-based platform that provides FX trading and risk management solutions for financial institutions.
-      - Designed architecture of extensible AppCloud application platform for Kooltra FX Cloud (on top of Salesforce) using AWS Serverless stack. Developed POC (Java) and established CI/CD pipeline (serverless, Gradle, CircleCI) for the project.
-      - Re-designed architecture of End-Of-Day and Net-Open-Positions processing apps to move resource-consuming workloads from Salesforce to AppCloud (AWS serverless).
-      - Provided support and guidance to junior developers and co-ops, organized and conducted numerous internal lunch-n-learn and technology demo sessions (development best practices, AWS knowledge sharing, product walkthroughs).
+      - Designed architecture of extensible AppCloud application platform for Kooltra FX Cloud (on top of Salesforce) 
+      using AWS Serverless stack. Developed POC (Java) and established CI/CD pipeline (serverless, Gradle, CircleCI) for the project.
+      - Re-designed architecture of End-Of-Day and Net-Open-Positions processing apps to move resource-consuming workloads 
+      from Salesforce to AppCloud (AWS serverless).
+      - Provided support and guidance to junior developers and co-ops, organized and conducted numerous internal lunch-n-learn 
+      and technology demo sessions (development best practices, AWS knowledge sharing, product walkthroughs).
 
   - company: Blue Coat Systems
     # link: '#'
@@ -91,10 +102,14 @@ experience:
     role: Principal Software Engineer
     location: North York
     description: |
-
-      - Designed architecture and leaded Phase I implementation of Service Provider Framework (SPF), a solution for ISP to simplify and streamline onboarding and management of small business clients on ProxySG web security platform. I was actively involved in requirements gathering, prototyping and validating system architecture, component and API design, security design, load and integration testing. The system was built using Java on AWS serverless stack.
-      - Re-designed persistence layer of CDP (see below) to support geographically distributed deployments of application cluster, implemented RDBMS to NoSQL (Cassandra) migration.
-      - Designed and implemented multiple improvements in transport layer to increase resilience and throughput of inter-node communication channels in application cluster.
+      - Designed architecture and leaded Phase I implementation of Service Provider Framework (SPF), 
+      a solution for ISP to simplify and streamline onboarding and management of small business clients on ProxySG web security platform. 
+      I was actively involved in requirements gathering, prototyping and validating system architecture, component and API design, 
+      security design, load and integration testing. The system was built using Java on AWS serverless stack.
+      - Re-designed persistence layer of CDP (see below) to support geographically distributed deployments of application cluster, 
+      implemented RDBMS to NoSQL (Cassandra) migration.
+      - Designed and implemented multiple improvements in transport layer to increase resilience and throughput of 
+      inter-node communication channels in application cluster.
 
   - company: Perspecsys
     # link: '#'
@@ -103,7 +118,11 @@ experience:
     role: Senior Software Engineer
     location: Mississauga
     description: |
-      - Co-designed architecture and implemented core components of Cloud Data Protection (CDP) Gateway - a solution to protect PII and confidential information in public SaaS applications. Designed and implemented number of system components, primary using core Java: lightweight container & DI, clustering with distributed job engine (Akka Cluster, Akka Remote, Akka Persistance + JDBC), crypto layer (symmetric encryption and key management with JCE), HTTP proxy, search engine (Elasticsearch) with business query analyzers (ANTLR), business rules engine (Drools).
+      - Co-designed architecture and implemented core components of Cloud Data Protection (CDP) Gateway - a solution to protect PII and confidential 
+      information in public SaaS applications. Designed and implemented number of system components, primary using core Java: 
+      lightweight containers & DI, clustering with distributed job engine (Akka Cluster, Akka Remote, Akka Persistance + JDBC),
+      encryption layer (symmetric encryption and key management with JCE), HTTP proxy, search engine (Elasticsearch) 
+      with business query analyzers (ANTLR), business rules engine (Drools).
       - Established good development practices within the team: coding standards, TDD, code reviews, code quality monitoring (SonarQube)
 
   - company: Various companies
