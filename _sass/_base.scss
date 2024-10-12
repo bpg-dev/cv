@@ -11,7 +11,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-weight: 500;
@@ -34,17 +39,20 @@ p {
   margin-bottom: 0.25rem;
 }
 
-ol, ul {
+ol,
+ul {
   padding-left: 2rem;
   margin-top: 0;
   margin-bottom: 0.25rem;
 
-  ol, ul {
+  ol,
+  ul {
     margin-bottom: 0;
   }
 }
 
-b, strong {
+b,
+strong {
   font-weight: $base-font-weight * 1.50;
 }
 
@@ -227,6 +235,18 @@ small {
 
         .item {
           flex-basis: 45%;
+        }
+      }
+    }
+  }
+
+  .experience {
+    .section-content {
+      .items {
+        .item {
+          &:not(:last-child) {
+            border-bottom: 1px dashed rgba($text-third-color, 0.25);
+          }
         }
       }
     }
