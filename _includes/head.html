@@ -54,6 +54,8 @@
 <!-- Umami Web Analytics -->
 <script async defer src="{{ umami.script }}"
   data-website-id="{{ umami.website_id }}"
-  {% if umami.domains %} data-domains="{{ umami.domains }}" {% endif %}></script>
+  {% if umami.domains %} data-domains="{{ umami.domains }}" {% endif %}
+  {% if umami.data_host_url %} data-host-url="{{ umami.data_host_url }}" {% endif %}
+  ></script>
 <!-- End Umami Web Analytics -->
 {%- endif %}
