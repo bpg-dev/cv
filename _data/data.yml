@@ -23,10 +23,10 @@ profile:
   order: 1
   title: Profile
   description: |
-    Highly skilled software development professional with decades of craftsmanship in software design, development and integration.
-    Hands-on experience in designing and implementing software projects of large scale and complexity.
-
-    Enthusiastic and passionate engineer, coach and mentor for the team.
+    Enthusiastic and passionate engineer, coach, and mentor. 
+    Experienced in designing and developing large-scale systems with expertise in cloud architectures, distributed systems, and event-driven microservices using a variety of modern technologies. 
+    Committed to mentoring and team development with a hands-on approach in both open-source and enterprise projects. 
+    Focused on building scalable, resilient solutions while optimizing performance across diverse infrastructures.
 
 experience:
   show: true
@@ -121,7 +121,7 @@ project:
     # tags:
     date: Sept 2021 - present
     description: |
-      I'm a maintainer and core developer of a Terraform / OpenTofu Provider that adds support for Proxmox VE solutions.
+      As a core developer and maintainer of the open-source terraform-provider-proxmox, I contribute to designing, developing, and maintaining the Terraform provider for managing Proxmox VE environments, ensuring feature implementation and community collaboration.
 
 
 skill:
@@ -135,13 +135,13 @@ skill:
     - Golang
     - Java
     - Scala
-  - name: Messaging
+  - name: Messaging Systems
     item:
     - NATS
     - SQS
     - Kinesis
     - Akka Streams
-  - name: Storage
+  - name: Databases/Storage
     item:
     - Cockroach DB
     - Postgres
@@ -151,19 +151,19 @@ skill:
     item:
     - Akka
     - Spring Boot
-  - name: Clouds
+  - name: Cloud Platforms
     item:
     - AWS
     - GCP
     - Azure
-  - name: Infrastructure
+  - name: Infrastructure & Orchestration
     item:
     - Kubernetes
     - Docker
     - Helm
     - Terraform
     - Packer
-  - name: CI/CD
+  - name: CI/CD Tools
     item:
     - GitHub Actions
     - Flux
