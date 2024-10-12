@@ -32,7 +32,6 @@ analytics:
   google:                   # google
   cloudflare:               # cloudflare
   umami:                    # umami (Replace it with your own)
-    script: /u.js
-    data_host_url: https://cloud.umami.is/
+    script: https://cloud.umami.is/script.js
     website_id: 36e6500f-b787-47c2-905d-d2a8544d1b34
     domains: boldyrev.me
