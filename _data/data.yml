@@ -36,7 +36,6 @@ experience:
   items:
   - company: Form3 Financial Cloud
     link: 'https://form3.tech/'
-    # tags: Full-time
     date: Jul 2022 - present
     role: Lead Software Developer
     location: remote
@@ -47,22 +46,20 @@ experience:
 
   - company: Arctic Wolf Networks
     link: 'https://arcticwolf.com/'
-    # tags: Full-time, remote
     date: Oct 2020 - Jun 2022
     role: Lead Software Developer
     location: remote
     description: |
       Arctic Wolf Networks is a cybersecurity company that provides managed detection and response services. 
        I contributed to the development and maintenance of the Arctic Wolf Agent software.
-      - Designed and implemented a CI/CD pipeline for Arctic Wolf Agent endpoint components (Golang / C, GitHub Actions, Docker).
+      - Built CI/CD pipeline for Arctic Wolf Agent (Golang/C, GitHub Actions, Docker).
       - Spearheaded migration of the stateful AWS EC2 backend stack to EKS, utilizing IaC to manage AWS and Kubernetes resources (CFN, ECR, EKS, S3, SSM, PostgreSQL RDS, ElastiCache, and more).
       - Developed an end-to-end user acceptance testing framework for diverse OS environments (Windows, various Linux distros), reducing release qualification time from weeks to days (Terraform, Packer, vSphere / AWS EC2, Golang).
-      - Performed maintenance, optimizations, and performance improvements on the backend stack to support client growth, while actively participating in DevOps rotations.
+      - Performed maintenance, optimizations, and performance improvements on the backend stack to support client growth, while actively participating in DevOps rotations. The system processed 10K+ events per second per node, with a 99.99% uptime.
       - Mentored junior developers, providing guidance and support in daily tasks and career development.
       
   - company: Street Contxt
     link: 'https://streetcontxt.com/'
-    # tags: Part-time, remote
     date: Jan 2020 - Oct 2020
     role: Software Developer III
     location: Toronto
@@ -74,7 +71,6 @@ experience:
 
   - company: Kooltra
     link: 'https://kooltra.com/'
-    # tags: Part-time, remote
     date: Sep 2018 - Dec 2019
     role: Principal Software Engineer
     location: Toronto
@@ -84,7 +80,6 @@ experience:
       - Supported junior developers and co-ops through mentorship, organizing internal lunch-and-learn sessions, tech demos, and knowledge-sharing on AWS and development best practices.
 
   - company: Blue Coat Systems
-    # link: '#'
     tags: acquired by Symantec in Jun 2016
     date: Jul 2015 - Sep 2018
     role: Principal Software Engineer
@@ -135,7 +130,7 @@ skill:
     - Golang
     - Java
     - Scala
-  - name: Messaging Systems
+  - name: Messaging & Streaming
     item:
     - NATS
     - SQS
