@@ -32,6 +32,6 @@ analytics:
   google:                   # google
   cloudflare:               # cloudflare
   umami:                    # umami (Replace it with your own)
-    script: https://cloud.umami.is/script.js
-    website_id: 36e6500f-b787-47c2-905d-d2a8544d1b34
-    domains: boldyrev.me
+    script: https://um.pavel.boldyrev.me/script.js
+    website_id: c5bb1fe3-df33-4855-bb6e-e56c1270dc1e
+    domains: pavel.boldyrev.me
