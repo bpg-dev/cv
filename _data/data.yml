@@ -40,10 +40,17 @@ experience:
     role: Lead Software Developer
     location: remote
     description: |
-      Form 3 is a cloud-based platform that provides real-time account-to-account payment solutions for financial institutions.
-      It integrates with multiple payment schemes, adapts to changing regulations and scales with customer growth.
-      - Stay tuned...
+      Form3 is a cloud-native platform delivering real-time, account-to-account payment solutions for financial institutions.  
+      It integrates seamlessly with multiple payment schemes, adheres to evolving regulatory requirements, and scales effortlessly to support customer growth.
 
+      **My Key Responsibilities:**
+      - Developing and maintaining robust, scalable backend services using **Golang**.  
+      - Designing distributed systems optimized for performance, scalability, and reliability with **CockroachDB** and **NATS**.  
+      - Leveraging **Kubernetes** and **Helm** for container orchestration and deployment across multi-cloud environments (**AWS**, **GCP**, **Azure**).  
+      - Creating and managing infrastructure as code using **Terraform** to ensure consistent and repeatable deployments.  
+      - Automating CI/CD pipelines with **GitHub Actions**, enabling efficient and seamless deployment workflows.  
+      - Leading and mentoring a team of four engineers, promoting collaboration, growth, and the delivery of high-quality solutions.  
+      - Providing production support and participating in a 24/7 on-call rotation to ensure high system availability and rapid issue resolution.  
   - company: Arctic Wolf Networks
     link: 'https://arcticwolf.com/'
     date: Oct 2020 - Jun 2022
@@ -51,10 +58,11 @@ experience:
     location: remote
     description: |
       Arctic Wolf Networks is a cybersecurity company that provides managed detection and response services. 
-       I contributed to the development and maintenance of the Arctic Wolf Agent software.
-      - Built CI/CD pipeline for Arctic Wolf Agent (Golang/C, GitHub Actions, Docker).
-      - Spearheaded migration of the stateful AWS EC2 backend stack to EKS, utilizing IaC to manage AWS and Kubernetes resources (CFN, ECR, EKS, S3, SSM, PostgreSQL RDS, ElastiCache, and more).
-      - Developed an end-to-end user acceptance testing framework for diverse OS environments (Windows, various Linux distros), reducing release qualification time from weeks to days (Terraform, Packer, vSphere / AWS EC2, Golang).
+      
+      I contributed to the development and maintenance of the Arctic Wolf Agent software:
+      - Built CI/CD pipeline for Arctic Wolf Agent (**Golang/C**, **GitHub Actions**, **Docker**).
+      - Spearheaded migration of the stateful AWS EC2 backend stack to EKS, utilizing IaC to manage **AWS** and **Kubernetes** resources (CFN, ECR, EKS, S3, SSM, PostgreSQL RDS, ElastiCache, and more).
+      - Developed an end-to-end user acceptance testing framework for diverse OS environments (Windows, various Linux distros), reducing release qualification time from weeks to days (**Terraform**, **Packer**, vSphere / AWS EC2).
       - Performed maintenance, optimizations, and performance improvements on the backend stack to support client growth, while actively participating in DevOps rotations. The system processed 10K+ events per second per node, with a 99.99% uptime.
       - Mentored junior developers, providing guidance and support in daily tasks and career development.
       
@@ -65,9 +73,9 @@ experience:
     location: Toronto
     description: |
       Street Contxt is a financial services platform that provides a suite of tools for financial professionals to manage and share information.
-      - Designed and implemented event-streaming microservices for email detection, external event reporting, and other functionalities (Scala, Akka Streams, Kinesis).
-      - Migrated 20+ microservices and libraries from Scala 2.11/12 to 2.13; established an automated dependency update pipeline and improved release management processes, including release notes drafting, promotion, and deployment (SBT, CircleCI, GitHub Actions).
-      - Maintained and enhanced a legacy J2EE application, adding new features and resolving issues (Java, PostgreSQL, JOOQ).
+      - Designed and implemented event-streaming microservices for email detection, external event reporting, and other functionalities (**Scala**, **Akka Streams**, **Kinesis**).
+      - Migrated 20+ microservices and libraries from Scala 2.11/12 to 2.13; established an automated dependency update pipeline and improved release management processes, including release notes drafting, promotion, and deployment (**sbt**, **CircleCI**, **GitHub Actions**).
+      - Maintained and enhanced a legacy J2EE application, adding new features and resolving issues (**Java**, **PostgreSQL**, **JOOQ**).
 
   - company: Kooltra
     link: 'https://kooltra.com/'
