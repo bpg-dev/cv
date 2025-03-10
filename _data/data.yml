@@ -17,6 +17,8 @@ contact:
   linkedin: pboldyrev
   mastodon: bpg@fosstodon.org # text, the format must be like "username@yourserver.com"
   github: bpg
+  strava: bpgca
+  website: pavel.boldyrev.me
 
 profile:
   show: true
