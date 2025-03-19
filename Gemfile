@@ -8,5 +8,14 @@ source "https://rubygems.org"
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
 gem "jekyll"
+gem "csv"
+gem "base64"
+gem "logger"
+gem "json"
+gem "yaml"
+gem "nokogiri"
+gem "open-uri"
+gem "uri"
+
 
 gem "webrick", group: :development
