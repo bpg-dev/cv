@@ -62,10 +62,10 @@ experience:
       Arctic Wolf Networks is a cybersecurity company that provides managed detection and response services. 
       
       I contributed to the development and maintenance of the Arctic Wolf Agent software:
-      - Built CI/CD pipeline for Arctic Wolf Agent (**Golang/C**, **GitHub Actions**, **Docker**).
       - Spearheaded migration of the stateful AWS EC2 backend stack to EKS, utilizing IaC to manage **AWS** and **Kubernetes** resources (CFN, ECR, EKS, S3, SSM, PostgreSQL RDS, ElastiCache, and more).
-      - Developed an end-to-end user acceptance testing framework for diverse OS environments (Windows, various Linux distros), reducing release qualification time from weeks to days (**Terraform**, **Packer**, vSphere / AWS EC2).
       - Performed maintenance, optimizations, and performance improvements on the backend stack to support client growth, while actively participating in DevOps rotations. The system processed 10K+ events per second per node, with a 99.99% uptime.
+      - Built CI/CD pipeline for Arctic Wolf Agent (**Golang/C**, **GitHub Actions**, **Docker**).
+      - Developed an end-to-end user acceptance testing framework for diverse OS environments (Windows, various Linux distros), reducing release qualification time from weeks to days (**Terraform**, **Packer**, vSphere / AWS EC2).
       - Mentored junior developers, providing guidance and support in daily tasks and career development.
       
   - company: Street Contxt
