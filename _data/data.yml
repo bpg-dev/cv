@@ -46,12 +46,13 @@ experience:
       It integrates seamlessly with multiple payment schemes, adheres to evolving regulatory requirements, and scales effortlessly to support customer growth.
 
       **My Key Responsibilities:**
-      - Developing and maintaining robust, scalable backend services using **Golang**.  
+      - Developing and maintaining robust, scalable backend services providing RESTful APIs using **Golang**.  
       - Designing distributed systems optimized for performance, scalability, and reliability with **CockroachDB** and **NATS**.  
       - Leveraging **Kubernetes** and **Helm** for container orchestration and deployment across multi-cloud environments (**AWS**, **GCP**, **Azure**).  
       - Creating and managing infrastructure as code using **Terraform** to ensure consistent and repeatable deployments.  
       - Automating CI/CD pipelines with **GitHub Actions**, enabling efficient and seamless deployment workflows.  
-      - Leading and mentoring a team of four engineers, promoting collaboration, growth, and the delivery of high-quality solutions.  
+      - Leading and mentoring a team of four engineers, promoting collaboration, growth, and the delivery of high-quality solutions.
+      - Working closely with Product on designing and prioritizing team's backlog and other engineering team to address cross-cutting concerns for the whole platform.  
       - Providing production support and participating in a 24/7 on-call rotation to ensure high system availability and rapid issue resolution.  
   - company: Arctic Wolf Networks
     link: 'https://arcticwolf.com/'
