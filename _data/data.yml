@@ -38,22 +38,22 @@ experience:
   items:
   - company: Form3 Financial Cloud
     link: 'https://form3.tech/'
-    date: Jul 2022 - present
+    date: Jul 2022 - Mar 2025
     role: Lead Software Developer
     location: remote
     description: |
       Form3 is a cloud-native platform delivering real-time, account-to-account payment solutions for financial institutions.  
       It integrates seamlessly with multiple payment schemes, adheres to evolving regulatory requirements, and scales effortlessly to support customer growth.
 
-      **My Key Responsibilities:**
-      - Developing and maintaining robust, scalable backend services providing RESTful APIs using **Golang**.  
-      - Designing distributed systems optimized for performance, scalability, and reliability with **CockroachDB** and **NATS**.  
-      - Leveraging **Kubernetes** and **Helm** for container orchestration and deployment across multi-cloud environments (**AWS**, **GCP**, **Azure**).  
-      - Creating and managing infrastructure as code using **Terraform** to ensure consistent and repeatable deployments.  
-      - Automating CI/CD pipelines with **GitHub Actions**, enabling efficient and seamless deployment workflows.  
-      - Leading and mentoring a team of four engineers, promoting collaboration, growth, and the delivery of high-quality solutions.
-      - Working closely with Product on designing and prioritizing team's backlog and other engineering team to address cross-cutting concerns for the whole platform.  
-      - Providing production support and participating in a 24/7 on-call rotation to ensure high system availability and rapid issue resolution.  
+      **Key Responsibilities:**
+      - Developed and maintained robust, scalable backend services providing RESTful APIs using **Golang**.  
+      - Designed distributed systems optimized for performance, scalability, and reliability with **CockroachDB** and **NATS**.  
+      - Leveraged **Kubernetes** and **Helm** for container orchestration and deployment across multi-cloud environments (**AWS**, **GCP**, **Azure**).  
+      - Created and managed infrastructure as code using **Terraform**, ensuring consistent and repeatable deployments.  
+      - Automated CI/CD pipelines with **GitHub Actions**, enabling efficient and seamless deployment workflows.  
+      - Led and mentored a team of four engineers, fostering collaboration, professional growth, and delivery of high-quality solutions.  
+      - Collaborated closely with Product to design and prioritize the team’s backlog, and coordinated with other engineering teams to address cross-cutting concerns across the platform.  
+      - Provided production support and participated in a 24/7 on-call rotation to maintain high system availability and ensure rapid issue resolution.   
   - company: Arctic Wolf Networks
     link: 'https://arcticwolf.com/'
     date: Oct 2020 - Jun 2022
@@ -62,8 +62,8 @@ experience:
     description: |
       Arctic Wolf Networks is a cybersecurity company that provides managed detection and response services. 
       
-      I contributed to the development and maintenance of the Arctic Wolf Agent software:
-      - Spearheaded migration of the stateful AWS EC2 backend stack to EKS, utilizing IaC to manage **AWS** and **Kubernetes** resources (CFN, ECR, EKS, S3, SSM, PostgreSQL RDS, ElastiCache, and more).
+      I contributed to the development and maintenance of the Arctic Wolf Agent software (client and backend):
+      - Spearheaded migration of the stateful AWS EC2 backend stack to EKS, utilizing IaC (**Python**, **Terraform**) to manage **AWS** and **Kubernetes** resources (CFN, ECR, EKS, S3, SSM, PostgreSQL RDS, ElastiCache, and more).
       - Performed maintenance, optimizations, and performance improvements on the backend stack to support client growth, while actively participating in on-call rotation. The system processed 10K+ events per second per node, with a 99.99% uptime (**Golang**, **PostgreSQL**, **ElastiCache**).
       - Built CI/CD pipeline for Arctic Wolf Agent (**Golang/C**, **Python**, **GitHub Actions**, **Docker**).
       - Developed an end-to-end user acceptance testing framework for diverse OS environments (Windows, various Linux distros), reducing release qualification time from weeks to days (**Terraform**, **Packer**, vSphere / AWS EC2).
