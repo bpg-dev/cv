@@ -48,12 +48,11 @@ experience:
       **Key Responsibilities:**
       - Developed and maintained robust, scalable backend services providing RESTful APIs using **Golang**.  
       - Designed distributed systems optimized for performance, scalability, and reliability with **CockroachDB** and **NATS**.  
-      - Leveraged **Kubernetes** and **Helm** for container orchestration and deployment across multi-cloud environments (**AWS**, **GCP**, **Azure**).  
-      - Created and managed infrastructure as code using **Terraform**, ensuring consistent and repeatable deployments.  
+      - Managed cloud infrastructure and application deployments in **Kubernetes** across **AWS**, **GCP**, and **Azure** using **Terraform** and GitOps tools like **Flux** and **Helm**, ensuring consistency, scalability, and operational reliability.  
       - Automated CI/CD pipelines with **GitHub Actions**, enabling efficient and seamless deployment workflows.  
       - Led and mentored a team of four engineers, fostering collaboration, professional growth, and delivery of high-quality solutions.  
       - Collaborated closely with Product to design and prioritize the team’s backlog, and coordinated with other engineering teams to address cross-cutting concerns across the platform.  
-      - Provided production support and participated in a 24/7 on-call rotation to maintain high system availability and ensure rapid issue resolution.   
+      - Provided production support and participated in a 24/7 on-call rotation to maintain high system availability and ensure rapid issue resolution.
   - company: Arctic Wolf Networks
     link: 'https://arcticwolf.com/'
     date: Oct 2020 - Jun 2022
