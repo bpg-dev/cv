@@ -14,11 +14,11 @@ contact:
   email: inbox.6y5ib@passmail.net # email address
   # phone: +1 (416) 720-0726 # phone number, the format is "+[Country Code] [Area Code (if applicable)] [Local Phone Number]"
   # website: example.com # site link without schema, like example.com, will automatically prepend "https://"
+  website: pavel.boldyrev.me
   linkedin: pboldyrev
   mastodon: bpg@fosstodon.org # text, the format must be like "username@yourserver.com"
   github: bpg
   strava: bpgca
-  website: pavel.boldyrev.me
 
 profile:
   show: true
@@ -36,6 +36,16 @@ experience:
   title: Experiences
 
   items:
+  - company: Paramount Commerce
+    link: 'https://paramountcommerce.com/'
+    date: Apr 2025 - present
+    role: Senior Software Engineer
+    location: remote
+    description: |
+      Paramount Commerce is a Toronto-based fintech company specializing in instant, bank account-based payment solutions for iGaming, e-commerce, and digital remittance, with over $100 billion processed to date.
+
+      Stay tuned for more details!
+
   - company: Form3 Financial Cloud
     link: 'https://form3.tech/'
     date: Jul 2022 - Mar 2025
