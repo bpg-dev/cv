@@ -1,0 +1,30 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "github>bpg/renovate-config",
+    "github>bpg/renovate-config:automerge-github-actions",
+    ":semanticCommitTypeAll(chore)"
+  ],
+  "packageRules": [
+    {
+      "description": "Group Hugo Docker image updates",
+      "matchPackageNames": ["ghcr.io/gohugoio/hugo"],
+      "matchManagers": ["dockerfile"],
+      "groupName": "hugo"
+    },
+    {
+      "description": "Group Caddy Docker image updates",
+      "matchPackageNames": ["caddy"],
+      "matchManagers": ["dockerfile"],
+      "groupName": "caddy"
+    },
+    {
+      "description": "Hugo version in GitHub Actions workflow",
+      "matchManagers": ["github-actions"],
+      "matchFileNames": [".github/workflows/hugo.yml"],
+      "matchDepNames": ["HUGO_VERSION"],
+      "groupName": "hugo-workflow"
+    }
+  ]
+}
+
