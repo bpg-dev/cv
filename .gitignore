@@ -1,8 +1,11 @@
-_site/
-.sass-cache/
-.jekyll-cache/
-.jekyll-metadata
-.bundle/
-vendor/
+# Hugo
+public/
+resources/_gen/
+.hugo_build.lock
+
+# OS
 .DS_Store
-Gemfile.lock
+
+# Editor
+.vscode/
+.idea/

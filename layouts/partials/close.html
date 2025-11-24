@@ -1,0 +1,8 @@
+<div class="close">
+  {{ if and .close (gt (len .close) 0) }}
+  <div class="description">
+    {{ .close | markdownify }}
+  </div>
+  {{ end }}
+</div>
+

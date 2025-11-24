@@ -1,0 +1,34 @@
+{{ $data := .Site.Data.data }}
+<!DOCTYPE html>
+<html lang='{{ $data.meta.language | default "en" }}' dir='{{ $data.meta.direction | default "ltr" }}'>
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+  <body>
+    {{ if .Site.Params.open }}
+    <div class="wrapper">
+      {{ partial "basic.html" $data }}
+      {{ partial "profile.html" $data }}
+      {{ partial "experience.html" $data }}
+      {{ partial "project.html" $data }}
+      {{ partial "skill.html" $data }}
+      {{ partial "education.html" $data }}
+      {{ partial "certificate.html" $data }}
+      {{ partial "publication.html" $data }}
+      {{ partial "award.html" $data }}
+      {{ partial "patent.html" $data }}
+      {{ partial "organization.html" $data }}
+      {{ partial "language.html" $data }}
+      {{ partial "interest.html" $data }}
+      {{ partial "evaluation.html" $data }}
+      {{ partial "reference.html" $data }}
+    </div>
+    {{ if .Site.Params.site_footer }}
+    {{ partial "footer.html" . }}
+    {{ end }}
+    {{ else }}
+    {{ partial "close.html" $data }}
+    {{ end }}
+  </body>
+</html>
+

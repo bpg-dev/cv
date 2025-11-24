@@ -1,0 +1,651 @@
+{{ $contact := .contact }}
+{{ $basic := .basic }}
+{{ if $contact }}
+<div class="contact" {{ if ne $basic.avatar.show true }}style="justify-content: center;"{{ end }}>
+  {{ if $contact.location }}
+  {{ $text := $contact.location }}
+  {{ $trimmed := $text | strings.TrimSpace }}
+  {{ $start := substr $trimmed 0 1 }}
+  <div class="contact-item" title="Location">
+    <i class="fa-solid fa-location-dot"></i>
+    {{ if eq $start "[" }}
+      {{ $text | markdownify | replaceRE "<p>" "" | replaceRE "</p>" "" | safeHTML }}
+    {{ else }}
+      <span>{{ $text }}</span>
+    {{ end }}
+  </div>
+  {{ end }}
+
+  {{ if $contact.email }}
+  {{ $text := $contact.email }}
+  {{ $link := printf "mailto:%s" $text }}
+  <div class="contact-item" title="Email">
+    <i class="fa-solid fa-envelope"></i>
+    <a href="{{ $link }}" title="{{ $link }}">{{ $text }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $contact.phone }}
+  {{ $text := $contact.phone }}
+  {{ $link := printf "tel:%s" $text }}
+  <div class="contact-item" title="Phone number">
+    <i class="fa-solid fa-phone"></i>
+    <a href="{{ $link }}" title="{{ $link }}">{{ $text }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $contact.website }}
+  {{ $text := $contact.website }}
+  {{ $link := printf "https://%s" $text }}
+  <div class="contact-item" title="Website">
+    <i class="fa-solid fa-link"></i>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $contact.gender }}
+  <div class="contact-item" title="Gender">
+    <i class="fa-solid fa-venus-mars"></i>
+    <span>{{ $contact.gender }}</span>
+  </div>
+  {{ end }}
+
+  {{ if $contact.birthday }}
+  <div class="contact-item" title="Birthday">
+    <i class="fa-solid fa-cake-candles"></i>
+    <span>{{ $contact.birthday }}</span>
+  </div>
+  {{ end }}
+
+  {{ if $contact.nationality }}
+  <div class="contact-item" title="Nationality">
+    <i class="fa-solid fa-flag"></i>
+    <span>{{ $contact.nationality }}</span>
+  </div>
+  {{ end }}
+
+  {{ if $contact.visa }}
+  <div class="contact-item" title="Passport visa">
+    <i class="fa-solid fa-passport"></i>
+    <span>{{ $contact.visa }}</span>
+  </div>
+  {{ end }}
+
+  {{ if $contact.drivinglicense }}
+  <div class="contact-item" title="Driving license">
+    <i class="fa-solid fa-car"></i>
+    <span>{{ $contact.drivinglicense }}</span>
+  </div>
+  {{ end }}
+
+  {{ if $contact.github }}
+  {{ $text := $contact.github }}
+  {{ $link := printf "https://github.com/%s" $text }}
+  <div class="contact-item" title="GitHub">
+    <i class="fa-brands fa-github"></i>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $contact.gitlab }}
+  {{ $text := $contact.gitlab }}
+  {{ $link := printf "https://gitlab.com/%s" $text }}
+  <div class="contact-item" title="GitLab">
+    <i class="fa-brands fa-gitlab"></i>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $contact.bitbucket }}
+  {{ $text := $contact.bitbucket }}
+  {{ $link := printf "https://bitbucket.com/%s" $text }}
+  <div class="contact-item" title="Bitbucket">
+    <i class="fa-brands fa-bitbucket"></i>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $contact.git }}
+  {{ $text := $contact.git }}
+  {{ $link := printf "https://%s" $text }}
+  <div class="contact-item" title="Git">
+    <i class="fa-brands fa-git"></i>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $contact.leetcode }}
+  {{ $text := $contact.leetcode }}
+  {{ $link := printf "https://leetcode.com/%s" $text }}
+  <div class="contact-item" title="LeetCode">
+    <i class="icon icon-leetcode"></i>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $contact.codeforces }}
+  {{ $text := $contact.codeforces }}
+  {{ $link := printf "https://codeforces.com/profile/%s" $text }}
+  <div class="contact-item" title="Codeforces">
+    <i class="icon icon-codeforces"></i>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $contact.codewars }}
+  {{ $text := $contact.codewars }}
+  {{ $link := printf "https://www.codewars.com/users/%s" $text }}
+  <div class="contact-item" title="Codewars">
+    <i class="icon icon-codewars"></i>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $contact.topcoder }}
+  {{ $text := $contact.topcoder }}
+  {{ $link := printf "https://profiles.topcoder.com/%s" $text }}
+  <div class="contact-item" title="Topcoder">
+    <i class="icon icon-topcoder"></i>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $contact.huggingface }}
+  {{ $text := $contact.huggingface }}
+  {{ $link := printf "https://huggingface.co/%s" $text }}
+  <div class="contact-item" title="Hugging Face">
+    <i class="icon icon-huggingface"></i>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $contact.codepen }}
+  {{ $text := $contact.codepen }}
+  {{ $link := printf "https://codepen.io/%s" $text }}
+  <div class="contact-item" title="CodePen">
+    <i class="fa-brands fa-codepen"></i>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $contact.tryhackme }}
+  {{ $text := $contact.tryhackme }}
+  {{ $link := printf "https://tryhackme.com/p/%s" $text }}
+  <div class="contact-item" title="TryHackMe">
+    <i class="icon icon-tryhackme"></i>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $contact.googlescholar }}
+  {{ $text := $contact.googlescholar }}
+  {{ $link := printf "https://scholar.google.com/citations?user=%s" $text }}
+  <div class="contact-item" title="Google Scholar">
+    <i class="fa-brands fa-google-scholar"></i>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $contact.researchgate }}
+  {{ $text := $contact.researchgate }}
+  {{ $link := printf "https://www.researchgate.net/profile/%s" $text }}
+  <div class="contact-item" title="ResearchGate">
+    <i class="fa-brands fa-researchgate"></i>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $contact.orcid }}
+  {{ $text := $contact.orcid }}
+  {{ $link := printf "https://orcid.org/%s" $text }}
+  <div class="contact-item" title="ORCID">
+    <i class="fa-brands fa-orcid"></i>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $contact.figshare }}
+  {{ $text := $contact.figshare }}
+  {{ $link := printf "https://figshare.com/authors/%s" $text }}
+  <div class="contact-item" title="figshare">
+    <i class="icon icon-figshare"></i>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $contact.kaggle }}
+  {{ $text := $contact.kaggle }}
+  {{ $link := printf "https://www.kaggle.com/%s" $text }}
+  <div class="contact-item" title="Kaggle">
+    <i class="fa-brands fa-kaggle"></i>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $contact.medium }}
+  {{ $text := $contact.medium }}
+  {{ $link := printf "https://medium.com/@%s" $text }}
+  <div class="contact-item" title="Medium">
+    <i class="fa-brands fa-medium"></i>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $contact.wordpress }}
+  {{ $text := $contact.wordpress }}
+  {{ $link := printf "https://%s.wordpress.com" $text }}
+  <div class="contact-item" title="WordPress">
+    <i class="fa-brands fa-wordpress"></i>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $contact.blogger }}
+  {{ $text := $contact.blogger }}
+  {{ $link := printf "https://%s.blogspot.com" $text }}
+  <div class="contact-item" title="Blogger">
+    <i class="fa-brands fa-blogger"></i>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $contact.devto }}
+  {{ $text := $contact.devto }}
+  {{ $link := printf "https://dev.to/@%s" $text }}
+  <div class="contact-item" title="DEV Community">
+    <i class="fa-brands fa-dev"></i>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $contact.figma }}
+  {{ $text := $contact.figma }}
+  {{ $link := printf "https://www.figma.com/@%s" $text }}
+  <div class="contact-item" title="Figma">
+    <i class="fa-brands fa-figma"></i>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $contact.behance }}
+  {{ $text := $contact.behance }}
+  {{ $link := printf "https://www.behance.net/%s" $text }}
+  <div class="contact-item" title="Behance">
+    <i class="fa-brands fa-behance"></i>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $contact.dribbble }}
+  {{ $text := $contact.dribbble }}
+  {{ $link := printf "https://dribbble.com/%s" $text }}
+  <div class="contact-item" title="Dribbble">
+    <i class="fa-brands fa-dribbble"></i>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $contact.artstation }}
+  {{ $text := $contact.artstation }}
+  {{ $link := printf "https://www.artstation.com/%s" $text }}
+  <div class="contact-item" title="ArtStation">
+    <i class="fa-brands fa-artstation"></i>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $contact.pixiv }}
+  {{ $text := $contact.pixiv }}
+  {{ $link := printf "https://www.pixiv.net/users/%s" $text }}
+  <div class="contact-item" title="Pixiv">
+    <i class="fa-brands fa-pixiv"></i>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $contact.pinterest }}
+  {{ $text := $contact.pinterest }}
+  {{ $link := printf "https://www.pinterest.com/%s" $text }}
+  <div class="contact-item" title="Pinterest">
+    <i class="fa-brands fa-pinterest"></i>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $contact.producthunt }}
+  {{ $text := $contact.producthunt }}
+  {{ $link := printf "https://www.producthunt.com/@%s" $text }}
+  <div class="contact-item" title="Product Hunt">
+    <i class="fa-brands fa-product-hunt"></i>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $contact.linkedin }}
+  {{ $text := $contact.linkedin }}
+  {{ $link := printf "https://linkedin.com/in/%s" $text }}
+  <div class="contact-item" title="LinkedIn">
+    <i class="fa-brands fa-linkedin"></i>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $contact.indeed }}
+  {{ $text := $contact.indeed }}
+  {{ $link := printf "https://my.indeed.com/p/%s" $text }}
+  <div class="contact-item" title="Indeed">
+    <i class="icon icon-indeed"></i>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $contact.xing }}
+  {{ $text := $contact.xing }}
+  {{ $link := printf "https://www.xing.com/profile/%s" $text }}
+  <div class="contact-item" title="XING">
+    <i class="fa-brands fa-xing"></i>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $contact.fiverr }}
+  {{ $text := $contact.fiverr }}
+  {{ $link := printf "https://www.fiverr.com/%s" $text }}
+  <div class="contact-item" title="Fiverr">
+    <i class="icon icon-fiverr"></i>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $contact.freelancer }}
+  {{ $text := $contact.freelancer }}
+  {{ $link := printf "https://www.freelancer.com/u/%s" $text }}
+  <div class="contact-item" title="Freelancer">
+    <i class="icon icon-freelancer"></i>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $contact.wechat }}
+  {{ $text := $contact.wechat }}
+  {{ $trimmed := $text | strings.TrimSpace }}
+  {{ $start := substr $trimmed 0 1 }}
+  <div class="contact-item" title="Wechat">
+    <i class="fa-brands fa-weixin"></i>
+    {{ if eq $start "[" }}
+      {{ $text | markdownify | replaceRE "<p>" "" | replaceRE "</p>" "" | safeHTML }}
+    {{ else }}
+      <span>{{ $text }}</span>
+    {{ end }}
+  </div>
+  {{ end }}
+
+  {{ if $contact.whatsapp }}
+  {{ $text := $contact.whatsapp }}
+  {{ $link := printf "https://wa.me/%s" $text }}
+  <div class="contact-item" title="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $contact.telegram }}
+  {{ $text := $contact.telegram }}
+  {{ $link := printf "https://t.me/%s" $text }}
+  <div class="contact-item" title="Telegram">
+    <i class="fa-brands fa-telegram"></i>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $contact.messenger }}
+  {{ $text := $contact.messenger }}
+  {{ $link := printf "https://m.me/%s" $text }}
+  <div class="contact-item" title="Messenger">
+    <i class="fa-brands fa-facebook-messenger"></i>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $contact.line }}
+  {{ $text := $contact.line }}
+  {{ $link := printf "https://line.me/R/ti/p/@%s" $text }}
+  <div class="contact-item" title="LINE">
+    <i class="fa-brands fa-line"></i>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $contact.viber }}
+  {{ $text := $contact.viber }}
+  {{ $link := printf "https://vb.me/R/%s" $text }}
+  <div class="contact-item" title="Viber">
+    <i class="fa-brands fa-viber"></i>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $contact.threema }}
+  {{ $text := $contact.threema }}
+  {{ $link := printf "https://threema.id/R/%s" $text }}
+  <div class="contact-item" title="Threema">
+    <i class="icon icon-threema"></i>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $contact.signal }}
+  {{ $text := $contact.signal }}
+  {{ $trimmed := $text | strings.TrimSpace }}
+  {{ $start := substr $trimmed 0 1 }}
+  <div class="contact-item" title="Signal">
+    <i class="fa-brands fa-signal-messenger"></i>
+    {{ if eq $start "[" }}
+      {{ $text | markdownify | replaceRE "<p>" "" | replaceRE "</p>" "" | safeHTML }}
+    {{ else }}
+      <span>{{ $text }}</span>
+    {{ end }}
+  </div>
+  {{ end }}
+
+  {{ if $contact.wire }}
+  {{ $text := $contact.wire }}
+  {{ $trimmed := $text | strings.TrimSpace }}
+  {{ $start := substr $trimmed 0 1 }}
+  <div class="contact-item" title="Wire">
+    <i class="icon icon-wire"></i>
+    {{ if eq $start "[" }}
+      {{ $text | markdownify | replaceRE "<p>" "" | replaceRE "</p>" "" | safeHTML }}
+    {{ else }}
+      <span>{{ $text }}</span>
+    {{ end }}
+  </div>
+  {{ end }}
+
+  {{ if $contact.stackoverflow }}
+  {{ $text := $contact.stackoverflow }}
+  {{ $link := printf "https://stackoverflow.com/users/%s" $text }}
+  <div class="contact-item" title="Stack Overflow">
+    <i class="fa-brands fa-stack-overflow"></i>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $contact.stackexchange }}
+  {{ $text := $contact.stackexchange }}
+  {{ $link := printf "https://stackexchange.com/users/%s" $text }}
+  <div class="contact-item" title="Stack Exchange">
+    <i class="fa-brands fa-stack-exchange"></i>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $contact.quora }}
+  {{ $text := $contact.quora }}
+  {{ $link := printf "https://www.quora.com/profile/%s" $text }}
+  <div class="contact-item" title="Quora">
+    <i class="fa-brands fa-quora"></i>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $contact.zhihu }}
+  {{ $text := $contact.zhihu }}
+  {{ $link := printf "https://www.zhihu.com/people/%s" $text }}
+  <div class="contact-item" title="知乎">
+    <i class="fa-brands fa-zhihu"></i>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $contact.goodreads }}
+  {{ $text := $contact.goodreads }}
+  {{ $link := printf "https://www.goodreads.com/user/show/%s" $text }}
+  <div class="contact-item" title="Goodreads">
+    <i class="fa-brands fa-goodreads"></i>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $contact.strava }}
+  {{ $text := $contact.strava }}
+  {{ $link := printf "https://www.strava.com/athletes/%s" $text }}
+  <div class="contact-item" title="Strava">
+    <i class="fa-brands fa-strava"></i>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $contact.wikipedia }}
+  {{ $text := $contact.wikipedia }}
+  {{ $link := printf "https://www.wikipedia.org/wiki/User:%s" $text }}
+  <div class="contact-item" title="Wikipedia">
+    <i class="fa-brands fa-wikipedia-w"></i>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $contact.twitter }}
+  {{ $text := $contact.twitter }}
+  {{ $link := printf "https://twitter.com/%s" $text }}
+  <div class="contact-item" title="Twitter">
+    <i class="fa-brands fa-twitter"></i>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $contact.x }}
+  {{ $text := $contact.x }}
+  {{ $link := printf "https://x.com/%s" $text }}
+  <div class="contact-item" title="X">
+    <i class="fa-brands fa-x-twitter"></i>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $contact.mastodon }}
+  {{ $text := $contact.mastodon }}
+  {{ $parts := split $text "@" }}
+  {{ $link := printf "https://%s/@%s" (index $parts 1) (index $parts 0) }}
+  <div class="contact-item" title="Mastodon">
+    <i class="fa-brands fa-mastodon"></i>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $contact.threads }}
+  {{ $text := $contact.threads }}
+  {{ $link := printf "https://www.threads.net/@%s" $text }}
+  <div class="contact-item" title="Threads">
+    <i class="fa-brands fa-threads"></i>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $contact.vk }}
+  {{ $text := $contact.vk }}
+  {{ $link := printf "https://vk.com/%s" $text }}
+  <div class="contact-item" title="VK">
+    <i class="fa-brands fa-vk"></i>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $contact.weibo }}
+  {{ $text := $contact.weibo }}
+  {{ $start := substr $text 0 1 }}
+  <div class="contact-item" title="新浪微博">
+    <i class="fa-brands fa-weibo"></i>
+    {{ if eq $start "[" }}
+      {{ $text | markdownify | replaceRE "<p>" "" | replaceRE "</p>" "" | safeHTML }}
+    {{ else }}
+      <span>{{ $text }}</span>
+    {{ end }}
+  </div>
+  {{ end }}
+
+  {{ if $contact.instagram }}
+  {{ $text := $contact.instagram }}
+  {{ $link := printf "https://instagram.com/%s" $text }}
+  <div class="contact-item" title="Instagram">
+    <i class="fa-brands fa-instagram"></i>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $contact.unsplash }}
+  {{ $text := $contact.unsplash }}
+  {{ $link := printf "https://unsplash.com/@%s" $text }}
+  <div class="contact-item" title="Unsplash">
+    <i class="fa-brands fa-unsplash"></i>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $contact._500px }}
+  {{ $text := $contact._500px }}
+  {{ $link := printf "https://500px.com/p/%s" $text }}
+  <div class="contact-item" title="500px">
+    <i class="fa-brands fa-500px"></i>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $contact.youtube }}
+  {{ $text := $contact.youtube }}
+  {{ $link := printf "https://www.youtube.com/@%s" $text }}
+  <div class="contact-item" title="YouTube">
+    <i class="fa-brands fa-youtube"></i>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $contact.tiktok }}
+  {{ $text := $contact.tiktok }}
+  {{ $link := printf "https://www.tiktok.com/@%s" $text }}
+  <div class="contact-item" title="TikTok">
+    <i class="fa-brands fa-tiktok"></i>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $contact.snapchat }}
+  {{ $text := $contact.snapchat }}
+  {{ $link := printf "https://www.snapchat.com/add/%s" $text }}
+  <div class="contact-item" title="Snapchat">
+    <i class="fa-brands fa-snapchat"></i>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $contact.twitch }}
+  {{ $text := $contact.twitch }}
+  {{ $link := printf "https://www.twitch.tv/%s" $text }}
+  <div class="contact-item" title="Twitch">
+    <i class="fa-brands fa-twitch"></i>
+    <a href="{{ $link }}" title="{{ $link }}" target="_blank">{{ $text }}</a>
+  </div>
+  {{ end }}
+</div>
+{{ end }}
+

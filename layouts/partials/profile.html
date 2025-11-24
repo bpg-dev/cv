@@ -1,0 +1,18 @@
+{{ $profile := .profile }}
+{{ if and $profile $profile.show }}
+<section class="profile" style="order: {{ $profile.order | default 1 }}">
+  <div class="section-title">
+    <i class="section-icon fa-solid fa-user"></i>
+    <h2>{{ $profile.title }}</h2>
+  </div>
+
+  <div class="section-content">
+    {{ if and $profile.description (gt (len $profile.description) 0) }}
+    <div class="description markdown">
+      {{ $profile.description | markdownify }}
+    </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+

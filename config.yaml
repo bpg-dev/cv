@@ -1,0 +1,55 @@
+title: Online Resume
+baseURL: ""
+languageCode: en
+defaultContentLanguage: en
+
+# Privacy
+params:
+  open: true
+  allow_search_engines: false
+  description: ""
+  open_graph:
+    enable: false
+    image: /assets/images/profile.jpg
+  
+  # Style
+  date_format: "2006-01-02"
+  theme_color: "#1DA1F2"
+  contact_delimiter: "·"
+  section_icon: true
+  section_title: uppercase
+  section_align: start
+  section_line: dashed
+  section_background: false
+  skill_level_icon: lightbulb
+  link_icon: true
+  site_footer: true
+  
+  # Analytics
+  analytics:
+    google: ""
+    cloudflare: ""
+    umami:
+      script: https://um.pavel.boldyrev.me/script.js
+      website_id: c5bb1fe3-df33-4855-bb6e-e56c1270dc1e
+      domains: pavel.boldyrev.me
+
+# Build settings
+build:
+  writeStats: false
+
+# Markup
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    style: github
+    codeFences: true
+
+# Output formats
+outputs:
+  home:
+    - HTML
+    - RSS
+

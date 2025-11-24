@@ -1,0 +1,57 @@
+{{ $skill := .skill }}
+{{ if and $skill $skill.show }}
+<section class="skill" style="order: {{ $skill.order | default 1 }}">
+  <div class="section-title">
+    <i class="section-icon fa-solid fa-toolbox"></i>
+    <h2>{{ $skill.title }}</h2>
+  </div>
+
+  <div class="section-content">
+    {{ if and $skill.description (gt (len $skill.description) 0) }}
+    <div class="description markdown">
+      {{ $skill.description | markdownify }}
+    </div>
+    {{ end }}
+
+    {{ if $skill.items }}
+    <div class="items">
+      {{ range $skill.items }}
+      <div class="item">
+        <div class="skill-name">
+          <span>{{ .name }}</span>
+        </div>
+        <div class="skill-level">
+          {{ $icon := "lightbulb" }}
+          {{ range $i := (seq 5) }}
+          {{ if le $i .level }}
+          <i class='fa-solid fa-{{ $icon }}'></i>
+          {{ else }}
+          <i class='fa-regular fa-{{ $icon }}'></i>
+          {{ end }}
+          {{ end }}
+        </div>
+      </div>
+      {{ end }}
+    </div>
+    {{ end }}
+
+    {{ if $skill.groups }}
+    <div class="groups">
+      {{ range $skill.groups }}
+      <div class="group">
+        <div class="group-name">
+          <span>{{ .name }}</span>
+        </div>
+        <div class="group-item">
+          {{ range .item }}
+          <span>{{ . }}</span>
+          {{ end }}
+        </div>
+      </div>
+      {{ end }}
+    </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+

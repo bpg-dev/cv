@@ -1,6 +1,3 @@
----
----
-
 @charset "utf-8";
 
 // Define defaults for each variable.
@@ -27,35 +24,35 @@ $text-third-color:  #97AAC3;
 $background-color:  #f5f5f5;
 $wrapper-color:     #ffffff;
 $heart-color:       #fb866a;
-$theme-color:       {{ site.theme_color | default: "#1DA1F2" }};
+$theme-color:       {{ default "#1DA1F2" .Site.Params.theme_color }};
 
 // Default delimiter
-$contact-delimiter: "{{ site.contact_delimiter | default: "·" }}";
+$contact-delimiter: "{{ default "·" .Site.Params.contact_delimiter }}";
 
 @import
-  "sanitize",
-  "base",
-  "responsive",
-  "print",
-  "fonts"
+  "_sass/sanitize",
+  "_sass/base",
+  "_sass/responsive",
+  "_sass/print",
+  "_sass/fonts"
 ;
 
 section {
   .section-title {
-    text-transform: {{ site.section_title | default: "uppercase" }};
-    justify-content: {{ site.section_align | default: "start" }};
-    border-bottom-style: {{ site.section_line | default: "dashed" }};
+    text-transform: {{ default "uppercase" .Site.Params.section_title }};
+    justify-content: {{ default "start" .Site.Params.section_align }};
+    border-bottom-style: {{ default "dashed" .Site.Params.section_line }};
 
-    {% if site.section_background %}
+    {{ if .Site.Params.section_background }}
     background-color: rgba($theme-color, 0.15);
-    {% endif %}
+    {{ end }}
 
-    {% if site.section_icon != true %}
+    {{ if ne .Site.Params.section_icon true }}
     .section-icon { display: none; }
-    {% endif %}
+    {{ end }}
   }
 
-  {% if site.link_icon %}
+  {{ if .Site.Params.link_icon }}
   .section-content {
     .markdown, .items {
       a::after {
@@ -71,5 +68,5 @@ section {
       }
     }
   }
-  {% endif %}
+  {{ end }}
 }

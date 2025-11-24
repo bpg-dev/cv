@@ -1,0 +1,55 @@
+{{ $award := .award }}
+{{ if and $award $award.show }}
+<section class="award" style="order: {{ $award.order | default 1 }}">
+  <div class="section-title">
+    <i class="section-icon fa-solid fa-award"></i>
+    <h2>{{ $award.title }}</h2>
+  </div>
+
+  <div class="section-content">
+    {{ if and $award.description (gt (len $award.description) 0) }}
+    <div class="description markdown">
+      {{ $award.description | markdownify }}
+    </div>
+    {{ end }}
+
+    {{ if $award.items }}
+    <div class="items">
+      {{ range $award.items }}
+      <div class="item">
+
+        {{ if .name }}
+        <div class="row">
+          <div class="award-name">
+            {{ if .link }}
+            <a href="{{ .link }}" target="_blank">{{ .name }}</a>
+            {{ else }}
+            <span>{{ .name }}</span>
+            {{ end }}
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="awarder">
+            <span>{{ .awarder }}</span>
+          </div>
+          <div class="date">
+            <span>{{ .date }}</span>
+          </div>
+        </div>
+
+        {{ if and .description (gt (len .description) 0) }}
+        <div class="description markdown">
+          {{ .description | markdownify }}
+        </div>
+        {{ end }}
+        {{ end }}
+
+      </div>
+      {{ end }}
+    </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+

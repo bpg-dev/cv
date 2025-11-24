@@ -1,0 +1,31 @@
+{{ $language := .language }}
+{{ if and $language $language.show }}
+<section class="language" style="order: {{ $language.order | default 1 }}">
+  <div class="section-title">
+    <i class="section-icon fa-solid fa-earth-americas"></i>
+    <h2>{{ $language.title }}</h2>
+  </div>
+
+  <div class="section-content">
+    {{ if and $language.description (gt (len $language.description) 0) }}
+    <div class="description markdown">
+      {{ $language.description | markdownify }}
+    </div>
+    {{ end }}
+
+    {{ if $language.items }}
+    <div class="items">
+      {{ range $language.items }}
+      <div class="item">
+        <span>{{ .idiom }}</span>
+        {{ if .level }}
+        <small>[{{ .level }}]</small>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+
