@@ -1,0 +1,54 @@
+name: Cleanup GHCR Images
+
+on:
+  schedule:
+    - cron: "0 2 * * 0" # Run weekly on Sunday at 2 AM UTC
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Run in dry-run mode (no deletions)"
+        required: false
+        default: "0"
+        type: choice
+        options:
+          - "0"
+          - "1"
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6.0.0
+
+      - name: Set up GitHub CLI
+        run: |
+          type -p curl >/dev/null || (apt-get update && apt-get install curl -y)
+          curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | \
+            dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \
+            oflag=obinary,sync,nocopy status=none
+          chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg
+          echo "deb [arch=$(dpkg --print-architecture) \
+            signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] \
+            https://cli.github.com/packages stable main" | \
+            tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+          apt-get update
+          apt-get install gh -y
+
+      - name: Run cleanup script
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_REPOSITORY_OWNER: ${{ github.repository_owner }}
+          DRY_RUN: ${{ inputs.dry_run || '0' }}
+        run: ./scripts/cleanup-ghcr.sh
+
