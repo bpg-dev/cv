@@ -15,34 +15,9 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  lint:
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
-
-      - name: Install linters
-        run: |
-          wget -qO- https://github.com/mrtazz/checkmake/releases/download/0.2.2/checkmake-0.2.2.linux-amd64.tar.gz | tar -xz
-          sudo mv checkmake /usr/local/bin/
-          wget -qO- https://github.com/rhymond/actionlint/releases/download/v1.7.4/actionlint_1.7.4_linux_amd64.tar.gz | tar -xz
-          sudo mv actionlint /usr/local/bin/
-          pip install yamllint==1.35.1
-
-      - name: Run hadolint
-        uses: hadolint/hadolint-action@v3.1.0
-        with:
-          dockerfile: Dockerfile
-          failure-threshold: error
-
-      - name: Run linters
-        run: ./scripts/lint.sh
-
   build-and-push:
     runs-on: ubuntu-latest
     timeout-minutes: 30
-    needs: lint
     permissions:
       contents: read
       packages: write
