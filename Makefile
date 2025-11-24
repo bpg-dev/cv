@@ -1,4 +1,4 @@
-.PHONY: hugo run build clean docker-build docker-run help
+.PHONY: all test hugo run build clean docker-build docker-run lint help
 
 # Variables
 IMAGE_NAME ?= cv-site
@@ -8,6 +8,10 @@ PORT ?= 8080
 
 # Default target
 .DEFAULT_GOAL := help
+
+all: help
+
+test: lint
 
 ## hugo: Build the Hugo site locally
 hugo:
@@ -49,6 +53,10 @@ docker-clean:
 	@docker stop $(CONTAINER_NAME) 2>/dev/null || true
 	@docker rm $(CONTAINER_NAME) 2>/dev/null || true
 	@echo "Docker container cleaned"
+
+## lint: Run all linters
+lint:
+	@./scripts/lint.sh
 
 ## help: Show this help message
 help:

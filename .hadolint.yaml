@@ -1,0 +1,6 @@
+---
+failure-threshold: error
+format: tty
+ignore:
+  - DL3008
+  - DL3009

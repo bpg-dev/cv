@@ -4,7 +4,7 @@ meta:
 
 basic:
   name: Pavel Boldyrev # name
-  title: Senior Software Engineer # job title 
+  title: Senior Software Engineer # job title
   avatar:
     show: true # show or hide avatar
     path: /assets/images/profile.jpg # file path or link to your avatar
@@ -25,9 +25,9 @@ profile:
   order: 1
   title: Profile
   description: |
-    Enthusiastic and passionate engineer, coach, and mentor. 
-    Experienced in designing and developing large-scale systems with expertise in cloud architectures, distributed systems, and event-driven microservices using a variety of modern technologies. 
-    Committed to mentoring and team development with a hands-on approach in both open-source and enterprise projects. 
+    Enthusiastic and passionate engineer, coach, and mentor.
+    Experienced in designing and developing large-scale systems with expertise in cloud architectures, distributed systems, and event-driven microservices using a variety of modern technologies.
+    Committed to mentoring and team development with a hands-on approach in both open-source and enterprise projects.
     Focused on building scalable, resilient solutions while optimizing performance across diverse infrastructures.
 
 experience:
@@ -36,154 +36,148 @@ experience:
   title: Experiences
 
   items:
-  - company: Paramount Commerce
-    link: 'https://paramountcommerce.com/'
-    date: Apr 2025 - present
-    role: Senior Software Engineer
-    location: remote
-    description: |
-      Paramount Commerce is a Toronto-based fintech company specializing in instant, bank account-based payment solutions for iGaming, e-commerce, and digital remittance, with over $100 billion processed to date.
+    - company: Paramount Commerce
+      link: "https://paramountcommerce.com/"
+      date: Apr 2025 - present
+      role: Senior Software Engineer
+      location: remote
+      description: |
+        Paramount Commerce is a Toronto-based fintech company specializing in instant, bank account-based payment solutions for iGaming, e-commerce, and digital remittance, with over $100 billion processed to date.
 
-      Stay tuned for more details!
+        Stay tuned for more details!
 
-  - company: Form3 Financial Cloud
-    link: 'https://form3.tech/'
-    date: Jul 2022 - Mar 2025
-    role: Lead Software Developer
-    location: remote
-    description: |
-      Form3 is a cloud-native platform delivering real-time, account-to-account payment solutions for financial institutions.  
-      It integrates seamlessly with multiple payment schemes, adheres to evolving regulatory requirements, and scales effortlessly to support customer growth.
+    - company: Form3 Financial Cloud
+      link: "https://form3.tech/"
+      date: Jul 2022 - Mar 2025
+      role: Lead Software Developer
+      location: remote
+      description: |
+        Form3 is a cloud-native platform delivering real-time, account-to-account payment solutions for financial institutions.
+        It integrates seamlessly with multiple payment schemes, adheres to evolving regulatory requirements, and scales effortlessly to support customer growth.
 
-      **Key Responsibilities:**
-      - Developed and maintained robust, scalable backend services providing RESTful APIs using **Golang**.  
-      - Designed distributed systems optimized for performance, scalability, and reliability with **CockroachDB** and **NATS**.  
-      - Managed cloud infrastructure and application deployments in **Kubernetes** across **AWS**, **GCP**, and **Azure** using **Terraform** and GitOps tools like **Flux** and **Helm**, ensuring consistency, scalability, and operational reliability.  
-      - Automated CI/CD pipelines with **GitHub Actions**, enabling efficient and seamless deployment workflows.  
-      - Led and mentored a team of four engineers, fostering collaboration, professional growth, and delivery of high-quality solutions.  
-      - Collaborated closely with Product to design and prioritize the team’s backlog, and coordinated with other engineering teams to address cross-cutting concerns across the platform.  
-      - Provided production support and participated in a 24/7 on-call rotation to maintain high system availability and ensure rapid issue resolution.
-  - company: Arctic Wolf Networks
-    link: 'https://arcticwolf.com/'
-    date: Oct 2020 - Jun 2022
-    role: Lead Software Developer
-    location: remote
-    description: |
-      Arctic Wolf Networks is a cybersecurity company that provides managed detection and response services. 
-      
-      I contributed to the development and maintenance of the Arctic Wolf Agent software (client and backend):
-      - Spearheaded migration of the stateful AWS EC2 backend stack to EKS, utilizing IaC (**Python**, **Terraform**) to manage **AWS** and **Kubernetes** resources (CFN, ECR, EKS, S3, SSM, PostgreSQL RDS, ElastiCache, and more).
-      - Performed maintenance, optimizations, and performance improvements on the backend stack to support client growth, while actively participating in on-call rotation. The system processed 10K+ events per second per node, with a 99.99% uptime (**Golang**, **PostgreSQL**, **ElastiCache**).
-      - Built CI/CD pipeline for Arctic Wolf Agent (**Golang/C**, **Python**, **GitHub Actions**, **Docker**).
-      - Developed an end-to-end user acceptance testing framework for diverse OS environments (Windows, various Linux distros), reducing release qualification time from weeks to days (**Terraform**, **Packer**, vSphere / AWS EC2).
-      - Mentored junior developers, providing guidance and support in daily tasks and career development.
-      
-  - company: Street Contxt
-    link: 'https://streetcontxt.com/'
-    date: Jan 2020 - Oct 2020
-    role: Software Developer III
-    location: Toronto
-    description: |
-      Street Contxt is a financial services platform that provides a suite of tools for financial professionals to manage and share information.
-      - Designed and implemented event-streaming microservices for email detection, external event reporting, and other functionalities (**Scala**, **Akka Streams**, **Kinesis**).
-      - Migrated 20+ microservices and libraries from Scala 2.11/12 to 2.13; established an automated dependency update pipeline and improved release management processes, including release notes drafting, promotion, and deployment (**sbt**, **CircleCI**, **GitHub Actions**).
-      - Maintained and enhanced a legacy J2EE application, adding new features and resolving issues (**Java**, **PostgreSQL**, **JOOQ**).
+        **Key Responsibilities:**
+        - Developed and maintained robust, scalable backend services providing RESTful APIs using **Golang**.
+        - Designed distributed systems optimized for performance, scalability, and reliability with **CockroachDB** and **NATS**.
+        - Managed cloud infrastructure and application deployments in **Kubernetes** across **AWS**, **GCP**, and **Azure** using **Terraform** and GitOps tools like **Flux** and **Helm**, ensuring consistency, scalability, and operational reliability.
+        - Automated CI/CD pipelines with **GitHub Actions**, enabling efficient and seamless deployment workflows.
+        - Led and mentored a team of four engineers, fostering collaboration, professional growth, and delivery of high-quality solutions.
+        - Collaborated closely with Product to design and prioritize the team’s backlog, and coordinated with other engineering teams to address cross-cutting concerns across the platform.
+        - Provided production support and participated in a 24/7 on-call rotation to maintain high system availability and ensure rapid issue resolution.
+    - company: Arctic Wolf Networks
+      link: "https://arcticwolf.com/"
+      date: Oct 2020 - Jun 2022
+      role: Lead Software Developer
+      location: remote
+      description: |
+        Arctic Wolf Networks is a cybersecurity company that provides managed detection and response services.
 
-  - company: Kooltra
-    link: 'https://kooltra.com/'
-    date: Sep 2018 - Dec 2019
-    role: Principal Software Engineer
-    location: Toronto
-    description: |
-      - Designed the architecture for an extensible AppCloud application platform for Kooltra FX Cloud, built on Salesforce and powered by AWS Serverless. Developed a Java-based proof of concept and established a CI/CD pipeline using Serverless, Gradle, and CircleCI.
-      - Re-architected End-of-Day and Net-Open-Positions processing apps to offload resource-intensive tasks from Salesforce to AppCloud (AWS Serverless).
-      - Supported junior developers and co-ops through mentorship, organizing internal lunch-and-learn sessions, tech demos, and knowledge-sharing on AWS and development best practices.
+        I contributed to the development and maintenance of the Arctic Wolf Agent software (client and backend):
+        - Spearheaded migration of the stateful AWS EC2 backend stack to EKS, utilizing IaC (**Python**, **Terraform**) to manage **AWS** and **Kubernetes** resources (CFN, ECR, EKS, S3, SSM, PostgreSQL RDS, ElastiCache, and more).
+        - Performed maintenance, optimizations, and performance improvements on the backend stack to support client growth, while actively participating in on-call rotation. The system processed 10K+ events per second per node, with a 99.99% uptime (**Golang**, **PostgreSQL**, **ElastiCache**).
+        - Built CI/CD pipeline for Arctic Wolf Agent (**Golang/C**, **Python**, **GitHub Actions**, **Docker**).
+        - Developed an end-to-end user acceptance testing framework for diverse OS environments (Windows, various Linux distros), reducing release qualification time from weeks to days (**Terraform**, **Packer**, vSphere / AWS EC2).
+        - Mentored junior developers, providing guidance and support in daily tasks and career development.
 
-  - company: Blue Coat Systems
-    tags: acquired by Symantec in Jun 2016
-    date: Jul 2015 - Sep 2018
-    role: Principal Software Engineer
-    location: North York
-    description: |
-      - Designed the architecture and led Phase I implementation of the Service Provider Framework (SPF), a solution for ISPs to streamline onboarding and management of small business clients on the ProxySG web security platform. Involved in requirements gathering, prototyping, system and security design, and load testing. Built using Java on an AWS Serverless stack.
-      - Re-designed the CDP persistence layer to support distributed deployments and led a migration from RDBMS to Cassandra (NoSQL).
-      - Enhanced the transport layer to improve resilience and throughput for inter-node communication within the application cluster.
+    - company: Street Contxt
+      link: "https://streetcontxt.com/"
+      date: Jan 2020 - Oct 2020
+      role: Software Developer III
+      location: Toronto
+      description: |
+        Street Contxt is a financial services platform that provides a suite of tools for financial professionals to manage and share information.
+        - Designed and implemented event-streaming microservices for email detection, external event reporting, and other functionalities (**Scala**, **Akka Streams**, **Kinesis**).
+        - Migrated 20+ microservices and libraries from Scala 2.11/12 to 2.13; established an automated dependency update pipeline and improved release management processes, including release notes drafting, promotion, and deployment (**sbt**, **CircleCI**, **GitHub Actions**).
+        - Maintained and enhanced a legacy J2EE application, adding new features and resolving issues (**Java**, **PostgreSQL**, **JOOQ**).
 
+    - company: Kooltra
+      link: "https://kooltra.com/"
+      date: Sep 2018 - Dec 2019
+      role: Principal Software Engineer
+      location: Toronto
+      description: |
+        - Designed the architecture for an extensible AppCloud application platform for Kooltra FX Cloud, built on Salesforce and powered by AWS Serverless. Developed a Java-based proof of concept and established a CI/CD pipeline using Serverless, Gradle, and CircleCI.
+        - Re-architected End-of-Day and Net-Open-Positions processing apps to offload resource-intensive tasks from Salesforce to AppCloud (AWS Serverless).
+        - Supported junior developers and co-ops through mentorship, organizing internal lunch-and-learn sessions, tech demos, and knowledge-sharing on AWS and development best practices.
 
-  - company: Perspecsys
-    # link: '#'
-    tags: acquired by Blue Coat Systems in Jul 2015
-    date: Jan 2012 - Jul 2015
-    role: Senior Software Engineer
-    location: Mississauga
-    description: |
-      - Co-designed the architecture and developed core components of the Cloud Data Protection (CDP) Gateway to safeguard PII and confidential data in public SaaS applications. Built key components primarily in Java, including lightweight containers, clustering with a distributed job engine (Akka Cluster, Remote, Persistence + JDBC), encryption layers (symmetric encryption and key management via JCE), HTTP proxy, and a search engine with business query analyzers (Elasticsearch, ANTLR), as well as a business rules engine (Drools).
-      - Established development best practices within the team, implementing coding standards, TDD, code reviews, and quality monitoring (SonarQube).
-  - company: Various companies
-    date: 2000 - 2012
-    role: Software Engineer / Senior Software Engineer / Team Lead
-    location: Belarus & Canada
-
-
+    - company: Blue Coat Systems
+      tags: acquired by Symantec in Jun 2016
+      date: Jul 2015 - Sep 2018
+      role: Principal Software Engineer
+      location: North York
+      description: |
+        - Designed the architecture and led Phase I implementation of the Service Provider Framework (SPF), a solution for ISPs to streamline onboarding and management of small business clients on the ProxySG web security platform. Involved in requirements gathering, prototyping, system and security design, and load testing. Built using Java on an AWS Serverless stack.
+        - Re-designed the CDP persistence layer to support distributed deployments and led a migration from RDBMS to Cassandra (NoSQL).
+        - Enhanced the transport layer to improve resilience and throughput for inter-node communication within the application cluster.
+    - company: Perspecsys
+      # link: '#'
+      tags: acquired by Blue Coat Systems in Jul 2015
+      date: Jan 2012 - Jul 2015
+      role: Senior Software Engineer
+      location: Mississauga
+      description: |
+        - Co-designed the architecture and developed core components of the Cloud Data Protection (CDP) Gateway to safeguard PII and confidential data in public SaaS applications. Built key components primarily in Java, including lightweight containers, clustering with a distributed job engine (Akka Cluster, Remote, Persistence + JDBC), encryption layers (symmetric encryption and key management via JCE), HTTP proxy, and a search engine with business query analyzers (Elasticsearch, ANTLR), as well as a business rules engine (Drools).
+        - Established development best practices within the team, implementing coding standards, TDD, code reviews, and quality monitoring (SonarQube).
+    - company: Various companies
+      date: 2000 - 2012
+      role: Software Engineer / Senior Software Engineer / Team Lead
+      location: Belarus & Canada
 project:
   show: true
   order: 3
   title: OSS Projects
 
   items:
-  - name: Terraform provider for Proxmox VE
-    link: 'https://github.com/bpg/terraform-provider-proxmox'
-    # tags:
-    date: Sept 2021 - present
-    description: |
-      As a core developer and maintainer of the open-source terraform-provider-proxmox, I contribute to designing, developing, and maintaining the Terraform provider for managing Proxmox VE environments, ensuring feature implementation and community collaboration.
-
-
+    - name: Terraform provider for Proxmox VE
+      link: "https://github.com/bpg/terraform-provider-proxmox"
+      # tags:
+      date: Sept 2021 - present
+      description: |
+        As a core developer and maintainer of the open-source terraform-provider-proxmox, I contribute to designing, developing, and maintaining the Terraform provider for managing Proxmox VE environments, ensuring feature implementation and community collaboration.
 skill:
   show: true
   order: 4
   title: Skills
 
   groups:
-  - name: Programming Languages
-    item:
-    - Golang
-    - Java
-    - Scala
-  - name: Messaging & Streaming
-    item:
-    - NATS
-    - SQS
-    - Kinesis
-    - Akka Streams
-  - name: Databases/Storage
-    item:
-    - Cockroach DB
-    - Postgres
-    - Elasticsearch
-    - Cassandra
-  - name: Frameworks
-    item:
-    - Akka
-    - Spring Boot
-  - name: Cloud Platforms
-    item:
-    - AWS
-    - GCP
-    - Azure
-  - name: Infrastructure & Orchestration
-    item:
-    - Kubernetes
-    - Docker
-    - Helm
-    - Terraform
-    - Packer
-  - name: CI/CD Tools
-    item:
-    - GitHub Actions
-    - Flux
-    - CircleCI
-    - Jenkins
+    - name: Programming Languages
+      item:
+        - Golang
+        - Java
+        - Scala
+    - name: Messaging & Streaming
+      item:
+        - NATS
+        - SQS
+        - Kinesis
+        - Akka Streams
+    - name: Databases/Storage
+      item:
+        - Cockroach DB
+        - Postgres
+        - Elasticsearch
+        - Cassandra
+    - name: Frameworks
+      item:
+        - Akka
+        - Spring Boot
+    - name: Cloud Platforms
+      item:
+        - AWS
+        - GCP
+        - Azure
+    - name: Infrastructure & Orchestration
+      item:
+        - Kubernetes
+        - Docker
+        - Helm
+        - Terraform
+        - Packer
+    - name: CI/CD Tools
+      item:
+        - GitHub Actions
+        - Flux
+        - CircleCI
+        - Jenkins
 
 education:
   show: true
@@ -191,36 +185,34 @@ education:
   title: Education
 
   items:
-  - institution: Belarussian National Technical University
-    date: 1995 - 2000
-    major: Software Engineering
-    degree: BSc
-
-
+    - institution: Belarussian National Technical University
+      date: 1995 - 2000
+      major: Software Engineering
+      degree: BSc
 certificate:
   show: true
   order: 6
   title: Certificates
 
   items:
-  - name: Building Scalable Systems
-    issuer: IBM
-    date: 2019
-    link: 'https://www.credly.com/badges/2c3da62c-dab5-46f5-b4ab-b1e38ba44c7b'
+    - name: Building Scalable Systems
+      issuer: IBM
+      date: 2019
+      link: "https://www.credly.com/badges/2c3da62c-dab5-46f5-b4ab-b1e38ba44c7b"
     # description: |
     #   It's my Example Certificate One by Example.
-  - name: Lightbend Reactive Architecture
-    issuer: IBM
-    date: 2019
-    link: https://www.credly.com/badges/c702697c-b578-480b-b774-b9c034197f38
+    - name: Lightbend Reactive Architecture
+      issuer: IBM
+      date: 2019
+      link: https://www.credly.com/badges/c702697c-b578-480b-b774-b9c034197f38
     # description: |
     #   It's my Example Certificate Two by Example.
-  - name: Functional Programming in Scala
-    issuer: Coursera
-    date: 2017
-    link: https://www.coursera.org/account/accomplishments/specialization/96M6ZJDGNQSL
-    # description: |
-    #   It's my Example Certificate Two by Example.
+    - name: Functional Programming in Scala
+      issuer: Coursera
+      date: 2017
+      link: https://www.coursera.org/account/accomplishments/specialization/96M6ZJDGNQSL
+      # description: |
+      #   It's my Example Certificate Two by Example.
 
 language:
   show: true
@@ -228,10 +220,10 @@ language:
   title: Languages
 
   items:
-  - idiom: Russian
-    level: Native
-  - idiom: English
-    level: Fluent
+    - idiom: Russian
+      level: Native
+    - idiom: English
+      level: Fluent
 
 interest:
   show: true
@@ -239,9 +231,9 @@ interest:
   title: Interests
 
   items:
-  - item: Cycling
-    link: 'https://www.strava.com/athletes/bpgca'
-  - item: Board Games
-  - item: Computer Games
+    - item: Cycling
+      link: "https://www.strava.com/athletes/bpgca"
+    - item: Board Games
+    - item: Computer Games
 
 close: <strong>Sorry, my resume has been hidden.</strong>

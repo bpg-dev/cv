@@ -11,7 +11,7 @@ params:
   open_graph:
     enable: false
     image: /assets/images/profile.jpg
-  
+
   # Style
   date_format: "2006-01-02"
   theme_color: "#1DA1F2"
@@ -24,7 +24,7 @@ params:
   skill_level_icon: lightbulb
   link_icon: true
   site_footer: true
-  
+
   # Analytics
   analytics:
     google: ""
@@ -52,4 +52,3 @@ outputs:
   home:
     - HTML
     - RSS
-
