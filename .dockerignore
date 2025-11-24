@@ -1,0 +1,32 @@
+# Git
+.git
+.gitignore
+.github
+
+# Hugo
+public/
+resources/_gen/
+.hugo_build.lock
+
+# OS
+.DS_Store
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode/
+.idea/
+*.iml
+
+# Documentation
+README.md
+*.md
+
+# CI/CD (keep Dockerfile and Caddyfile, but ignore workflow files in build context)
+# .github/ is already ignored above
+
+# Temporary files
+*.log
+*.tmp
+

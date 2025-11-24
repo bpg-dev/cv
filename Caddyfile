@@ -1,0 +1,33 @@
+# Caddyfile for static site serving
+# Automatic HTTPS is enabled by default in Caddy
+
+:80 {
+    # Root directory for static files
+    root * /usr/share/caddy
+    
+    # Enable file server
+    file_server
+    
+    # Enable compression
+    encode gzip zstd
+    
+    # Security headers
+    header {
+        # Prevent clickjacking
+        X-Frame-Options "SAMEORIGIN"
+        # XSS protection
+        X-Content-Type-Options "nosniff"
+        # Content Security Policy (adjust as needed)
+        Referrer-Policy "strict-origin-when-cross-origin"
+    }
+    
+    # Try files in order (useful for SPAs, but fine for static sites too)
+    try_files {path} /index.html
+    
+    # Logging
+    log {
+        output stdout
+        format console
+    }
+}
+
