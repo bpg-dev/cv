@@ -151,3 +151,26 @@ echo "  - untagged: ${UNTAGGED_DELETE_COUNT}"
 echo "  - Total: ${TOTAL_DELETE_COUNT}"
 echo ""
 echo "Cleanup complete"
+
+# Write summary to GitHub Actions step summary if available
+if [ -n "${GITHUB_STEP_SUMMARY}" ]; then
+  {
+    echo "## GHCR Cleanup Summary"
+    echo ""
+    echo "### Versions to Keep"
+    echo "- **Latest**: ${LATEST_COUNT}"
+    echo "- **Date tags**: $((DATE_COUNT - DATE_DELETE_COUNT))"
+    echo ""
+    echo "### Versions to Delete"
+    echo "- **Date tags**: ${DATE_DELETE_COUNT}"
+    echo "- **Buildcache**: ${BUILDCACHE_DELETE_COUNT}"
+    echo "- **Untagged**: ${UNTAGGED_DELETE_COUNT}"
+    echo "- **Total**: **${TOTAL_DELETE_COUNT}**"
+    echo ""
+    if [ "${DRY_RUN}" = "1" ]; then
+      echo "> ⚠️ **Dry-run mode**: No versions were actually deleted"
+    else
+      echo "> ✅ Cleanup completed successfully"
+    fi
+  } >> "${GITHUB_STEP_SUMMARY}"
+fi
