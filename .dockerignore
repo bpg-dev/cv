@@ -5,7 +5,7 @@
 
 # Hugo
 public/
-resources/_gen/
+resources/
 .hugo_build.lock
 
 # OS

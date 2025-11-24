@@ -6,12 +6,13 @@ ENV HUGO_BASEURL=""
 
 COPY config.yaml ./
 COPY layouts/ ./layouts/
-COPY data/ ./data/
 COPY assets/ ./assets/
 COPY static/ ./static/
+COPY data/ ./data/
 COPY content/ ./content/
 
-RUN hugo --minify --gc
+RUN --mount=type=cache,target=/tmp/hugo_cache \
+  hugo --minify --gc --cacheDir /tmp/hugo_cache
 
 FROM caddy:alpine@sha256:953131cfea8e12bfe1c631a36308e9660e4389f0c3dfb3be957044d3ac92d446
 
