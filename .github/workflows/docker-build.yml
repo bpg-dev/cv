@@ -10,9 +10,14 @@ env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
 
+concurrency:
+  group: docker-build-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     permissions:
       contents: read
       packages: write
@@ -56,4 +61,6 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
           platforms: linux/amd64,linux/arm64
+          build-args: |
+            GITHUB_REPOSITORY=${{ github.repository }}
 

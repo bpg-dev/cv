@@ -30,3 +30,13 @@ README.md
 *.log
 *.tmp
 
+# Build artifacts
+*.tar
+*.tar.gz
+*.zip
+
+# Test files
+*_test.go
+test/
+tests/
+
