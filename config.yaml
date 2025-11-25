@@ -30,8 +30,9 @@ params:
     google: ""
     cloudflare: ""
     umami:
-      script: https://um.pavel.boldyrev.me/script.js
-      website_id: c5bb1fe3-df33-4855-bb6e-e56c1270dc1e
+      script: /um/um.js
+      website_id: 0f6684c1-2c0a-4d23-8dbe-3a432c3b9ddc
+      host_url: /um
       domains: pavel.boldyrev.me
 
 # Build settings

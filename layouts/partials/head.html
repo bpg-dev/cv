@@ -53,13 +53,15 @@
 {{ end }}
 
 {{ $umami := .Site.Params.analytics.umami }}
-{{ if and $umami.script $umami.website_id }}
+{{ if and $umami.website_id $umami.script }}
 <!-- Umami Web Analytics -->
-<script async defer src="{{ $umami.script }}"
+<script
+  async
+  defer
   data-website-id="{{ $umami.website_id }}"
-  {{ if $umami.domains }} data-domains="{{ $umami.domains }}" {{ end }}
-  {{ if $umami.data_host_url }} data-host-url="{{ $umami.data_host_url }}" {{ end }}
-  ></script>
+  {{ if $umami.host_url }}data-host-url="{{ $umami.host_url }}"{{ end }}
+  {{ if $umami.domains }}data-domains="{{ $umami.domains }}"{{ end }}
+  src="{{ $umami.script }}"></script>
 <!-- End Umami Web Analytics -->
 {{ end }}
 
