@@ -5,6 +5,7 @@ IMAGE_NAME ?= cv-site
 IMAGE_TAG ?= latest
 CONTAINER_NAME ?= cv-site
 PORT ?= 8080
+METRICS_PORT ?= 2019
 
 # Default target
 .DEFAULT_GOAL := help
@@ -30,14 +31,16 @@ docker-build:
 
 ## docker-run: Run the Docker container
 docker-run:
-	@echo "Running Docker container on port $(PORT)..."
+	@echo "Running Docker container on port $(PORT) (metrics on $(METRICS_PORT))..."
 	@docker stop $(CONTAINER_NAME) 2>/dev/null || true
 	@docker rm $(CONTAINER_NAME) 2>/dev/null || true
 	docker run -d \
 		--name $(CONTAINER_NAME) \
 		-p $(PORT):80 \
+		-p $(METRICS_PORT):2019 \
 		$(IMAGE_NAME):$(IMAGE_TAG)
 	@echo "Container running at http://localhost:$(PORT)"
+	@echo "Metrics available at http://localhost:$(METRICS_PORT)/metrics"
 	@echo "Stop with: docker stop $(CONTAINER_NAME)"
 
 ## clean: Clean build artifacts

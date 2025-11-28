@@ -34,7 +34,7 @@ COPY --from=builder /src/public /usr/share/caddy
 # The nobody user already exists in Alpine, so we don't need to create it
 RUN chown -R 65534:65534 /usr/share/caddy /etc/caddy 2>/dev/null || true
 
-EXPOSE 80 443
+EXPOSE 80 443 2019
 
 HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
   CMD wget --no-verbose --tries=1 --spider http://localhost/ || exit 1
