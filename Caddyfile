@@ -1,30 +1,28 @@
 {
-    # Enable admin API and metrics
-    admin localhost:2019
+	admin localhost:2019
 }
 
 :80 {
-    root * /usr/share/caddy
-    file_server
-    encode gzip zstd
-    
-    header {
-        X-Frame-Options "SAMEORIGIN"
-        X-Content-Type-Options "nosniff"
-        Referrer-Policy "strict-origin-when-cross-origin"
-        Permissions-Policy "geolocation=(), microphone=(), camera=()"
-    }
-    
-    try_files {path} /index.html
-    
-    log {
-        output stdout
-        format console
-    }
+	root * /usr/share/caddy
+	file_server
+	encode gzip zstd
+
+	header {
+		X-Frame-Options "SAMEORIGIN"
+		X-Content-Type-Options "nosniff"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		Permissions-Policy "geolocation=(), microphone=(), camera=()"
+	}
+
+	try_files {path} /index.html
+
+	log {
+		output stdout
+		format console
+	}
 }
 
-# Metrics endpoint for Prometheus (exposed on port 2019)
 :2019 {
-    metrics /metrics
+	metrics /metrics
 }
 
