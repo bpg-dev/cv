@@ -14,7 +14,7 @@ COPY content/ ./content/
 RUN --mount=type=cache,target=/tmp/hugo_cache \
 	hugo --minify --gc --cacheDir /tmp/hugo_cache
 
-FROM caddy:alpine@sha256:953131cfea8e12bfe1c631a36308e9660e4389f0c3dfb3be957044d3ac92d446
+FROM caddy:alpine@sha256:f2b257f20955d6be2229bed86bad24193eeb8c4dc962a4031a6eb42344ffa457
 
 ARG GITHUB_REPOSITORY
 LABEL org.opencontainers.image.title="CV Site"
