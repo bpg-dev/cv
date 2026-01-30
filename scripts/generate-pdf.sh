@@ -24,8 +24,8 @@ echo "Generating PDF: ${OUTPUT_FILE}..."
 httpd -f -p "$PORT" -h "$PUBLIC_DIR" &
 HTTPD_PID=$!
 
-# Ensure httpd is killed on exit
-trap "kill $HTTPD_PID 2>/dev/null" EXIT
+# Ensure httpd is killed on exit (|| true prevents non-zero exit code)
+trap "kill $HTTPD_PID 2>/dev/null || true" EXIT
 
 # Give server a moment to start
 sleep 1
