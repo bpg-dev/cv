@@ -9,7 +9,7 @@
     {{ $name := $data.basic.name | replaceRE "\\s+" "" }}
     {{ $date := now.Format "20060102" }}
     {{ $pdfName := printf "%s-%s.pdf" $name $date }}
-    <div class="wrapper">
+    <main class="wrapper">
       {{ partial "basic.html" (dict "data" $data "pdfName" $pdfName) }}
       {{ partial "profile.html" $data }}
       {{ partial "experience.html" $data }}
@@ -25,7 +25,7 @@
       {{ partial "interest.html" $data }}
       {{ partial "evaluation.html" $data }}
       {{ partial "reference.html" $data }}
-    </div>
+    </main>
     {{ if .Site.Params.site_footer }}
     {{ partial "footer.html" . }}
     {{ end }}
