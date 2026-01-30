@@ -3,13 +3,9 @@
 {{ $basic := $data.basic }}
 {{ if $basic }}
 <section class="basic">
-  {{ if and $basic.avatar.show $basic.avatar.path }}
+  {{ if $basic.avatar.show }}
   <div class="avatar-container">
-    {{ $avatar := resources.Get (strings.TrimPrefix "/assets/" $basic.avatar.path) }}
-    {{ with $avatar }}
-      {{ $webp := .Resize "100x100 webp" }}
-    <img class="avatar" src="{{ $webp.RelPermalink }}" alt="avatar" width="100" height="100">
-    {{ end }}
+    <img class="avatar" src="/profile.webp" alt="avatar" width="100" height="100">
     {{ with $pdfName }}
     <a href="/{{ . }}" download class="pdf-download" title="Download PDF">
       <i class="fa-solid fa-file-pdf"></i> pdf

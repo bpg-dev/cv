@@ -10,7 +10,7 @@ params:
   description: ""
   open_graph:
     enable: false
-    image: /assets/images/profile.jpg
+    image: /profile.webp
 
   # Style
   date_format: "2006-01-02"

@@ -97,7 +97,7 @@ make docker-run CONTAINER_NAME=my-cv-container
 ```text
 .
 ├── config.yaml          # Hugo configuration
-├── Caddyfile           # Caddy web server configuration
+├── static-web-server.toml  # Web server configuration
 ├── Dockerfile          # Multi-stage Docker build
 ├── Makefile            # Build automation commands
 ├── content/            # Content files (markdown)
@@ -153,7 +153,7 @@ The site is containerized using Docker and can be deployed to Kubernetes.
 A GitHub Actions workflow (`.github/workflows/docker-build.yml`) automatically:
 
 - Builds the Hugo site
-- Creates a multi-stage Docker image with Caddy web server
+- Creates a multi-stage Docker image with static-web-server
 - Pushes the image to GitHub Container Registry (GHCR)
 - Tags images with `YYYYMMDD-<commit-sha>` and `latest`
 
@@ -192,7 +192,7 @@ The site will be available at `http://localhost:8080` (or custom port via `PORT`
 2. **Run the container:**
 
    ```bash
-   docker run -p 8080:80 cv-site:latest
+   docker run -p 8080:8080 cv-site:latest
    ```
 
    Or use Makefile:
@@ -211,10 +211,9 @@ The site will be available at `http://localhost:8080` (or custom port via `PORT`
 
 Use the Docker image in your Kubernetes manifests. The image:
 
-- Serves static files via Caddy on port 80 (HTTP)
-- Exposes port 443 (for HTTPS if configured)
-- Includes health checks
-- Runs as non-root user
+- Serves static files via static-web-server on port 8080 (HTTP)
+- Includes health check endpoint at `/health`
+- Runs as non-root user (distroless base)
 
 **Example Kubernetes Service:**
 
@@ -227,8 +226,8 @@ spec:
   selector:
     app: cv-site
   ports:
-    - port: 80
-      targetPort: 80
+    - port: 8080
+      targetPort: 8080
   type: ClusterIP
 ```
 
@@ -273,103 +272,9 @@ This site was migrated from Jekyll. Key differences:
 - Restart the Hugo server
 - Clear the cache: `hugo --cleanDestinationDir`
 
-## Enabling Automatic HTTPS with Caddy
-
-By default, the Caddyfile is configured to serve HTTP only (port 80), which is suitable for use behind an ingress controller in Kubernetes. However, Caddy supports automatic HTTPS with Let's Encrypt certificates.
-
-### How Automatic HTTPS Works
-
-Caddy automatically:
-
-- Detects domain names in the Caddyfile
-- Obtains SSL/TLS certificates from Let's Encrypt via ACME protocol
-- Renews certificates before expiration
-- Redirects HTTP → HTTPS automatically
-
-### Enabling Automatic HTTPS
-
-To enable automatic HTTPS, update the `Caddyfile` to include your domain name:
-
-**Current configuration (HTTP only):**
-
-```caddy
-:80 {
-    root * /usr/share/caddy
-    file_server
-    # ... other settings
-}
-```
-
-**Updated configuration (with automatic HTTPS):**
-
-```caddy
-pavel.boldyrev.me {
-    root * /usr/share/caddy
-    file_server
-    encode gzip zstd
-    
-    header {
-        X-Frame-Options "SAMEORIGIN"
-        X-Content-Type-Options "nosniff"
-        Referrer-Policy "strict-origin-when-cross-origin"
-    }
-    
-    log {
-        output stdout
-        format console
-    }
-}
-```
-
-### Requirements for Automatic HTTPS
-
-1. **Public domain name** - Must be a valid domain (not localhost or IP address)
-2. **DNS configuration** - Domain must point to your server/pod
-3. **Port accessibility** - Ports 80 and 443 must be accessible from the internet
-4. **Email (optional)** - For Let's Encrypt notifications
-
-### Kubernetes Considerations
-
-In Kubernetes, you have two main approaches:
-
-#### Option 1: Caddy handles HTTPS directly
-
-- Update Caddyfile with your domain
-- Expose ports 80 and 443 via Service/LoadBalancer
-- Ensure DNS points to your Kubernetes service
-- Caddy will automatically obtain and renew certificates
-
-#### Option 2: Ingress controller handles HTTPS (recommended)
-
-- Keep current HTTP-only Caddyfile
-- Use an ingress controller (nginx-ingress, traefik, etc.) for HTTPS
-- Configure TLS at the ingress level
-- More flexible for multiple services
-
-### Certificate Storage
-
-Caddy stores certificates in `/data/caddy` by default. In Kubernetes, you may want to:
-
-- Use a PersistentVolume for certificate persistence
-- Mount the volume at `/data` in your pod
-- This ensures certificates persist across pod restarts
-
-**Example Kubernetes volume mount:**
-
-```yaml
-volumeMounts:
-  - name: caddy-data
-    mountPath: /data
-volumes:
-  - name: caddy-data
-    persistentVolumeClaim:
-      claimName: caddy-certificates
-```
-
 ## Resources
 
 - [Hugo Documentation](https://gohugo.io/documentation/)
 - [Hugo Quick Start](https://gohugo.io/getting-started/quick-start/)
 - [Go Template Primer](https://gohugo.io/templates/introduction/)
-- [Caddy Documentation](https://caddyserver.com/docs/)
-- [Caddy Automatic HTTPS](https://caddyserver.com/docs/automatic-https)
+- [static-web-server Documentation](https://static-web-server.net/)

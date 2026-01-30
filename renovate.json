@@ -13,10 +13,10 @@
       "groupName": "hugo"
     },
     {
-      "description": "Group Caddy Docker image updates",
-      "matchPackageNames": ["caddy"],
+      "description": "Group static-web-server Docker image updates",
+      "matchPackageNames": ["joseluisq/static-web-server"],
       "matchManagers": ["dockerfile"],
-      "groupName": "caddy"
+      "groupName": "static-web-server"
     },
     {
       "description": "Hugo version in GitHub Actions workflow",

@@ -37,8 +37,8 @@ static/              # Favicon, fonts, robots.txt
 ## Tech Stack
 
 - **Hugo** (Extended) - Static site generator with SCSS
-- **Docker** - Multi-stage build (Hugo builder + Caddy runtime)
-- **Caddy** - Web server with compression and security headers
+- **Docker** - Multi-stage build with distroless base image
+- **static-web-server** - Lightweight Rust-based web server (~5MB)
 - **GitHub Actions** - CI/CD to GitHub Container Registry
 
 ## Deployment
