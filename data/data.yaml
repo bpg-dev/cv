@@ -236,4 +236,4 @@ interest:
     - item: Board Games
     - item: Computer Games
 
-close: <strong>Sorry, my resume has been hidden.</strong>
+close: "**Sorry, my resume has been hidden.**"

@@ -29,6 +29,8 @@ COPY --from=builder /src/public /usr/share/caddy
 
 RUN chown -R 65534:65534 /usr/share/caddy /etc/caddy 2>/dev/null || true
 
+USER 65534
+
 EXPOSE 80 443 2019
 
 HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
