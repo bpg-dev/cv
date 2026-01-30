@@ -6,8 +6,11 @@
   </head>
   <body>
     {{ if .Site.Params.open }}
+    {{ $name := $data.basic.name | replaceRE "\\s+" "" }}
+    {{ $date := now.Format "20060102" }}
+    {{ $pdfName := printf "%s-%s.pdf" $name $date }}
     <div class="wrapper">
-      {{ partial "basic.html" $data }}
+      {{ partial "basic.html" (dict "data" $data "pdfName" $pdfName) }}
       {{ partial "profile.html" $data }}
       {{ partial "experience.html" $data }}
       {{ partial "project.html" $data }}

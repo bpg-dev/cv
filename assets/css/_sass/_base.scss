@@ -63,6 +63,7 @@ small {
 .wrapper {
   display: flex;
   flex-direction: column;
+  position: relative;
 
   background: $wrapper-color;
   max-width: $content-width;
@@ -176,10 +177,30 @@ small {
     flex-direction: row-reverse;
     justify-content: space-between;
 
-    .avatar {
-      max-height: 100px;
-      border: 0px solid $wrapper-color;
-      // box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    .avatar-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5em;
+
+      .avatar {
+        max-height: 100px;
+        border: 0px solid $wrapper-color;
+      }
+
+      .pdf-download {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.3em;
+        font-size: $small-font-size;
+        color: $text-third-color;
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: $theme-color;
+          text-decoration: none;
+        }
+      }
     }
 
     .header {

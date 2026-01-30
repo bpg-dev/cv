@@ -14,6 +14,21 @@ COPY content/ ./content/
 RUN --mount=type=cache,target=/tmp/hugo_cache \
 	hugo --minify --gc --cacheDir /tmp/hugo_cache
 
+# PDF generation stage
+FROM alpine:3.21@sha256:a8560b36e8b8210634f77d9f7f9efd7ffa463e380b75e2e74aff4511df3ef88c AS pdf-generator
+
+# Chromium for accurate PDF rendering (matches browser output exactly)
+RUN apk add --no-cache chromium busybox-extras
+
+WORKDIR /src
+
+COPY --from=builder /src/public ./public
+COPY data/data.yaml ./data/
+COPY scripts/generate-pdf.sh ./scripts/
+
+RUN chmod +x ./scripts/generate-pdf.sh && \
+	./scripts/generate-pdf.sh ./public ./data/data.yaml
+
 FROM caddy:alpine@sha256:f2b257f20955d6be2229bed86bad24193eeb8c4dc962a4031a6eb42344ffa457
 
 ARG GITHUB_REPOSITORY
@@ -25,7 +40,7 @@ RUN chmod +x /usr/bin/caddy && \
 	chown 65534:65534 /usr/bin/caddy 2>/dev/null || true
 
 COPY Caddyfile /etc/caddy/Caddyfile
-COPY --from=builder /src/public /usr/share/caddy
+COPY --from=pdf-generator /src/public /usr/share/caddy
 
 RUN chown -R 65534:65534 /usr/share/caddy /etc/caddy 2>/dev/null || true
 

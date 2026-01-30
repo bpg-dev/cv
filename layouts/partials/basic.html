@@ -1,8 +1,17 @@
-{{ $basic := .basic }}
+{{ $data := .data | default . }}
+{{ $pdfName := .pdfName }}
+{{ $basic := $data.basic }}
 {{ if $basic }}
 <section class="basic">
   {{ if and $basic.avatar.show $basic.avatar.path }}
-  <img class="avatar" src="{{ $basic.avatar.path | relURL }}" alt="avatar">
+  <div class="avatar-container">
+    <img class="avatar" src="{{ $basic.avatar.path | relURL }}" alt="avatar">
+    {{ with $pdfName }}
+    <a href="/{{ . }}" download class="pdf-download" title="Download PDF">
+      <i class="fa-solid fa-file-pdf"></i> pdf
+    </a>
+    {{ end }}
+  </div>
   {{ end }}
 
   <div class="header" {{ if ne $basic.avatar.show true }}style="align-items: center;"{{ end }}>
@@ -12,7 +21,7 @@
     <h3 class="title">{{ $basic.title }}</h3>
     {{ end }}
     {{ end }}
-    {{ partial "contact.html" . }}
+    {{ partial "contact.html" (dict "contact" $data.contact "basic" $basic) }}
   </div>
 </section>
 {{ end }}
