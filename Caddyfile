@@ -2,7 +2,7 @@
 	admin localhost:2019
 }
 
-:80 {
+:8080 {
 	root * /usr/share/caddy
 	file_server
 	encode gzip zstd

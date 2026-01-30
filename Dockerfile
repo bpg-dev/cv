@@ -29,11 +29,12 @@ COPY scripts/generate-pdf.sh ./scripts/
 RUN chmod +x ./scripts/generate-pdf.sh && \
 	./scripts/generate-pdf.sh ./public ./data/data.yaml
 
-# Extract Caddy binary from official image
-FROM caddy:2.9-alpine@sha256:f2b257f20955d6be2229bed86bad24193eeb8c4dc962a4031a6eb42344ffa457 AS caddy
+# Extract and prepare Caddy binary (strip file capabilities for cap-drop=ALL compatibility)
+FROM caddy:2@sha256:70e816c44fb79071fc4cd939ffda76e3b629642309efe31a4fb0ed45873be464 AS caddy
+RUN setcap -r /usr/bin/caddy
 
-# Final minimal image using distroless
-FROM gcr.io/distroless/static-debian12:nonroot@sha256:cba10d7abd3e203428e86f5b2d7fd5eb7d8987c387864ae4996cf97191b33764
+# Final minimal image using distroless with glibc
+FROM gcr.io/distroless/base-debian12:nonroot@sha256:107333192f6732e786f65df4df77f1d8bfb500289aad09540e43e0f7b6a2b816
 
 ARG GITHUB_REPOSITORY
 LABEL org.opencontainers.image.title="CV Site"
@@ -46,7 +47,7 @@ COPY --from=pdf-generator /src/public /usr/share/caddy
 
 USER nonroot:nonroot
 
-EXPOSE 80 443 2019
+EXPOSE 8080 2019
 
 CMD ["/usr/bin/caddy", "run", "--config", "/etc/caddy/Caddyfile"]
 
