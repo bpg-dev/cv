@@ -2,6 +2,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="{{ "/favicon.ico" | relURL }}" type="image/x-icon">
+
+<!-- Preload critical fonts -->
+<link rel="preload" href="{{ "/assets/fontawesome/webfonts/fa-solid-900.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ "/assets/fontawesome/webfonts/fa-brands-400.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
 <meta name="description" content="{{ if .Site.Params.open }}{{ if .Site.Params.description }}{{ .Site.Params.description }}{{ else }}{{ .Site.Title }}{{ end }}{{ else }}Online Resume{{ end }}">
 
 {{ if and .Site.Params.open .Site.Params.open_graph.enable }}

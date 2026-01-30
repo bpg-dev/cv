@@ -36,7 +36,7 @@ docker-run:
 	@docker rm $(CONTAINER_NAME) 2>/dev/null || true
 	docker run -d \
 		--name $(CONTAINER_NAME) \
-		-p $(PORT):80 \
+		-p $(PORT):8080 \
 		-p $(METRICS_PORT):2019 \
 		$(IMAGE_NAME):$(IMAGE_TAG)
 	@echo "Container running at http://localhost:$(PORT)"

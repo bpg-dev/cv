@@ -5,7 +5,11 @@
 <section class="basic">
   {{ if and $basic.avatar.show $basic.avatar.path }}
   <div class="avatar-container">
-    <img class="avatar" src="{{ $basic.avatar.path | relURL }}" alt="avatar">
+    {{ $avatar := resources.Get (strings.TrimPrefix "/assets/" $basic.avatar.path) }}
+    {{ with $avatar }}
+      {{ $webp := .Resize "100x100 webp" }}
+    <img class="avatar" src="{{ $webp.RelPermalink }}" alt="avatar" width="100" height="100">
+    {{ end }}
     {{ with $pdfName }}
     <a href="/{{ . }}" download class="pdf-download" title="Download PDF">
       <i class="fa-solid fa-file-pdf"></i> pdf
