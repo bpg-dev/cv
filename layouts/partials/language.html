@@ -2,7 +2,7 @@
 {{ if and $language $language.show }}
 <section class="language" style="order: {{ $language.order | default 1 }}">
   <div class="section-title">
-    <i class="section-icon fa-solid fa-earth-americas"></i>
+    <i class="section-icon fa-solid fa-earth-americas" aria-hidden="true"></i>
     <h2>{{ $language.title }}</h2>
   </div>
 

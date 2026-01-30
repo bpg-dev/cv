@@ -2,7 +2,7 @@
 {{ if and $reference $reference.show }}
 <section class="reference" style="order: {{ $reference.order | default 1 }}">
   <div class="section-title">
-    <i class="section-icon fa-solid fa-circle-nodes"></i>
+    <i class="section-icon fa-solid fa-circle-nodes" aria-hidden="true"></i>
     <h2>{{ $reference.title }}</h2>
   </div>
 
@@ -21,7 +21,7 @@
         {{ if .name }}
         <div class="reference-name">
           {{ if .link }}
-          <a href="{{ .link }}" target="_blank">{{ .name }}</a>
+          <a href="{{ .link }}" target="_blank" rel="noopener noreferrer">{{ .name }}</a>
           {{ else }}
           <span>{{ .name }}</span>
           {{ end }}

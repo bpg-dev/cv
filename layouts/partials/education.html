@@ -2,7 +2,7 @@
 {{ if and $education $education.show }}
 <section class="education" style="order: {{ $education.order | default 1 }}">
   <div class="section-title">
-    <i class="section-icon fa-solid fa-user-graduate"></i>
+    <i class="section-icon fa-solid fa-user-graduate" aria-hidden="true"></i>
     <h2>{{ $education.title }}</h2>
   </div>
 
@@ -22,7 +22,7 @@
         <div class="row">
           <div class="institution">
             {{ if .link }}
-            <a href="{{ .link }}" target="_blank">{{ .institution }}</a>
+            <a href="{{ .link }}" target="_blank" rel="noopener noreferrer">{{ .institution }}</a>
             {{ else }}
             <span>{{ .institution }}</span>
             {{ end }}
@@ -38,7 +38,7 @@
           </div>
           {{ if .degree }}
           <div class="degree">
-            <i class="fa-solid fa-graduation-cap"></i>
+            <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
             <span>{{ .degree }}</span>
           </div>
           {{ end }}

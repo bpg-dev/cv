@@ -2,7 +2,7 @@
 {{ if and $publication $publication.show }}
 <section class="publication" style="order: {{ $publication.order | default 1 }}">
   <div class="section-title">
-    <i class="section-icon fa-solid fa-newspaper"></i>
+    <i class="section-icon fa-solid fa-newspaper" aria-hidden="true"></i>
     <h2>{{ $publication.title }}</h2>
   </div>
 
@@ -21,7 +21,7 @@
         {{ if .title }}
         <div class="publication-title">
           {{ if .link }}
-          <a href="{{ .link }}" target="_blank">{{ .title }}</a>
+          <a href="{{ .link }}" target="_blank" rel="noopener noreferrer">{{ .title }}</a>
           {{ else }}
           <span>{{ .title }}</span>
           {{ end }}

@@ -2,7 +2,7 @@
 {{ if and $skill $skill.show }}
 <section class="skill" style="order: {{ $skill.order | default 1 }}">
   <div class="section-title">
-    <i class="section-icon fa-solid fa-toolbox"></i>
+    <i class="section-icon fa-solid fa-toolbox" aria-hidden="true"></i>
     <h2>{{ $skill.title }}</h2>
   </div>
 
@@ -20,13 +20,13 @@
         <div class="skill-name">
           <span>{{ .name }}</span>
         </div>
-        <div class="skill-level">
+        <div class="skill-level" role="img" aria-label="Skill level: {{ .level }} out of 5">
           {{ $icon := "lightbulb" }}
           {{ range $i := (seq 5) }}
           {{ if le $i .level }}
-          <i class='fa-solid fa-{{ $icon }}'></i>
+          <i class='fa-solid fa-{{ $icon }}' aria-hidden="true"></i>
           {{ else }}
-          <i class='fa-regular fa-{{ $icon }}'></i>
+          <i class='fa-regular fa-{{ $icon }}' aria-hidden="true"></i>
           {{ end }}
           {{ end }}
         </div>

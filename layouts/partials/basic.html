@@ -5,10 +5,10 @@
 <section class="basic">
   {{ if $basic.avatar.show }}
   <div class="avatar-container">
-    <img class="avatar" src="/profile.webp" alt="avatar" width="100" height="100">
+    <img class="avatar" src="/profile.webp" alt="{{ $basic.name }}" width="100" height="100">
     {{ with $pdfName }}
-    <a href="/{{ . }}" download class="pdf-download" title="Download PDF">
-      <i class="fa-solid fa-file-pdf"></i> pdf
+    <a href="/{{ . }}" download class="pdf-download" title="pdf">
+      <i class="fa-solid fa-file-pdf" aria-hidden="true"></i> <span>pdf</span>
     </a>
     {{ end }}
   </div>

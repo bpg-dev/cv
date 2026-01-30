@@ -2,7 +2,7 @@
 {{ if and $interest $interest.show }}
 <section class="interest" style="order: {{ $interest.order | default 1 }}">
   <div class="section-title">
-    <i class="section-icon fa-solid fa-hand-spock"></i>
+    <i class="section-icon fa-solid fa-hand-spock" aria-hidden="true"></i>
     <h2>{{ $interest.title }}</h2>
   </div>
 
@@ -18,7 +18,7 @@
       {{ range $interest.items }}
       <div class="item">
         {{ if .link }}
-        <a href="{{ .link }}" target="_blank">{{ .item }}</a>
+        <a href="{{ .link }}" target="_blank" rel="noopener noreferrer">{{ .item }}</a>
         {{ else }}
         <span>{{ .item }}</span>
         {{ end }}

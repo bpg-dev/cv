@@ -2,7 +2,7 @@
 {{ if and $evaluation $evaluation.show }}
 <section class="evaluation" style="order: {{ $evaluation.order | default 1 }}">
   <div class="section-title">
-    <i class="section-icon fa-solid fa-hand-sparkles"></i>
+    <i class="section-icon fa-solid fa-hand-sparkles" aria-hidden="true"></i>
     <h2>{{ $evaluation.title }}</h2>
   </div>
 
