@@ -26,9 +26,9 @@ profile:
   title: Profile
   description: |
     Enthusiastic and passionate engineer, coach, and mentor.
-    Experienced in designing and developing large-scale systems with expertise in cloud architectures, distributed systems, and event-driven microservices using a variety of modern technologies.
+    Key contributor to mission-critical payment platforms processing billions of transactions annually for tier-one financial institutions, with zero-downtime multi-cloud architectures handling 1,500+ TPS.
+    Experienced in designing and developing large-scale distributed systems and event-driven microservices using modern technologies.
     Committed to mentoring and team development with a hands-on approach in both open-source and enterprise projects.
-    Focused on building scalable, resilient solutions while optimizing performance across diverse infrastructures.
 
 experience:
   show: true
@@ -44,7 +44,11 @@ experience:
       description: |
         Paramount Commerce is a Toronto-based fintech company specializing in instant, bank account-based payment solutions for iGaming, e-commerce, and digital remittance, with over $100 billion processed to date.
 
-        Stay tuned for more details!
+        **Key Responsibilities:**
+        - Develop and extend the event-driven, cloud-agnostic payment platform, delivering new capabilities and features using **Golang**, **PostgreSQL**, **Kafka**, and **Dragonfly**.
+        - Drive key integrations with tier-one Canadian financial institutions, providing critical technical insight and maintaining close collaboration with financial partners.
+        - Optimize CI/CD pipelines, reducing build times by 40% and improving developer experience for the team.
+        - Provide production support and participate in 24/7 on-call rotations to ensure platform reliability.
 
     - company: Form3 Financial Cloud
       link: "https://form3.tech/"
@@ -71,7 +75,7 @@ experience:
       description: |
         Arctic Wolf Networks is a cybersecurity company that provides managed detection and response services.
 
-        I contributed to the development and maintenance of the Arctic Wolf Agent software (client and backend):
+        Contributed to the development and maintenance of the Arctic Wolf Agent software (client and backend):
         - Spearheaded migration of the stateful AWS EC2 backend stack to EKS, utilizing IaC (**Python**, **Terraform**) to manage **AWS** and **Kubernetes** resources (CFN, ECR, EKS, S3, SSM, PostgreSQL RDS, ElastiCache, and more).
         - Performed maintenance, optimizations, and performance improvements on the backend stack to support client growth, while actively participating in on-call rotation. The system processed 10K+ events per second per node, with a 99.99% uptime (**Golang**, **PostgreSQL**, **ElastiCache**).
         - Built CI/CD pipeline for Arctic Wolf Agent (**Golang/C**, **Python**, **GitHub Actions**, **Docker**).
@@ -85,6 +89,7 @@ experience:
       location: Toronto
       description: |
         Street Contxt is a financial services platform that provides a suite of tools for financial professionals to manage and share information.
+
         - Designed and implemented event-streaming microservices for email detection, external event reporting, and other functionalities (**Scala**, **Akka Streams**, **Kinesis**).
         - Migrated 20+ microservices and libraries from Scala 2.11/12 to 2.13; established an automated dependency update pipeline and improved release management processes, including release notes drafting, promotion, and deployment (**sbt**, **CircleCI**, **GitHub Actions**).
         - Maintained and enhanced a legacy J2EE application, adding new features and resolving issues (**Java**, **PostgreSQL**, **JOOQ**).
@@ -95,26 +100,32 @@ experience:
       role: Principal Software Engineer
       location: Toronto
       description: |
+        Kooltra is a fintech company providing a cloud-based FX trading platform built on Salesforce and AWS, serving banks, credit unions, and FX brokers across North America.
+
         - Designed the architecture for an extensible AppCloud application platform for Kooltra FX Cloud, built on Salesforce and powered by AWS Serverless. Developed a Java-based proof of concept and established a CI/CD pipeline using Serverless, Gradle, and CircleCI.
         - Re-architected End-of-Day and Net-Open-Positions processing apps to offload resource-intensive tasks from Salesforce to AppCloud (AWS Serverless).
         - Supported junior developers and co-ops through mentorship, organizing internal lunch-and-learn sessions, tech demos, and knowledge-sharing on AWS and development best practices.
 
     - company: Blue Coat Systems
-      tags: acquired by Symantec in Jun 2016
+      tags: acquired by Symantec for $4.65B in Jun 2016
       date: Jul 2015 - Sep 2018
       role: Principal Software Engineer
       location: North York
       description: |
+        Blue Coat Systems was a cybersecurity company providing web gateway appliances and cloud security solutions, protecting enterprises from web-based threats and enabling secure cloud adoption.
+
         - Designed the architecture and led Phase I implementation of the Service Provider Framework (SPF), a solution for ISPs to streamline onboarding and management of small business clients on the ProxySG web security platform. Involved in requirements gathering, prototyping, system and security design, and load testing. Built using Java on an AWS Serverless stack.
         - Re-designed the CDP persistence layer to support distributed deployments and led a migration from RDBMS to Cassandra (NoSQL).
         - Enhanced the transport layer to improve resilience and throughput for inter-node communication within the application cluster.
     - company: Perspecsys
       # link: '#'
-      tags: acquired by Blue Coat Systems in Jul 2015
+      tags: acquired by Blue Coat Systems for ~$200M in Jul 2015
       date: Jan 2012 - Jul 2015
       role: Senior Software Engineer
       location: Mississauga
       description: |
+        Perspecsys was a cloud security startup providing the Cloud Data Protection Gateway, enabling enterprises to use SaaS applications like Salesforce while keeping sensitive data encrypted and under their control.
+
         - Co-designed the architecture and developed core components of the Cloud Data Protection (CDP) Gateway to safeguard PII and confidential data in public SaaS applications. Built key components primarily in Java, including lightweight containers, clustering with a distributed job engine (Akka Cluster, Remote, Persistence + JDBC), encryption layers (symmetric encryption and key management via JCE), HTTP proxy, and a search engine with business query analyzers (Elasticsearch, ANTLR), as well as a business rules engine (Drools).
         - Established development best practices within the team, implementing coding standards, TDD, code reviews, and quality monitoring (SonarQube).
     - company: Various companies
@@ -130,9 +141,9 @@ project:
     - name: Terraform provider for Proxmox VE
       link: "https://github.com/bpg/terraform-provider-proxmox"
       # tags:
-      date: Sept 2021 - present
+      date: Sep 2021 - present
       description: |
-        As a core developer and maintainer of the open-source terraform-provider-proxmox, I contribute to designing, developing, and maintaining the Terraform provider for managing Proxmox VE environments, ensuring feature implementation and community collaboration.
+        Core developer and maintainer of the open-source Terraform provider for managing Proxmox VE environments (1,700+ GitHub stars). Responsible for designing new features, reviewing community contributions, and ensuring project quality and documentation.
 skill:
   show: true
   order: 4
@@ -144,17 +155,20 @@ skill:
         - Golang
         - Java
         - Scala
+        - Python
     - name: Messaging & Streaming
       item:
+        - Kafka
         - NATS
         - SQS
         - Kinesis
         - Akka Streams
     - name: Databases/Storage
       item:
-        - Cockroach DB
+        - CockroachDB
         - Postgres
         - Elasticsearch
+        - Redis / Dragonfly
         - Cassandra
     - name: Frameworks
       item:
