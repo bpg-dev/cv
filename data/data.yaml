@@ -45,7 +45,7 @@ experience:
         Paramount Commerce is a Toronto-based fintech company specializing in instant, bank account-based payment solutions for iGaming, e-commerce, and digital remittance, with over $100 billion processed to date.
 
         **Key Responsibilities:**
-        - Develop and extend the event-driven, cloud-agnostic payment platform, delivering new capabilities and features using **Golang**, **PostgreSQL**, **Kafka**, and **Dragonfly**.
+        - Develop and extend the event-driven, cloud-agnostic payment platform, delivering new capabilities and features using **Golang**, **PostgreSQL**, **CockroachDB**, **Kafka**, **NATS**, and **Dragonfly**.
         - Drive key integrations with tier-one Canadian financial institutions, providing critical technical insight and maintaining close collaboration with financial partners.
         - Optimize CI/CD pipelines, reducing build times by 40% and improving developer experience for the team.
         - Provide production support and participate in 24/7 on-call rotations to ensure platform reliability.
