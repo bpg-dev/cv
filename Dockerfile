@@ -37,7 +37,7 @@ RUN chmod +x ./scripts/generate-pdf.sh ./scripts/subset-fonts.sh && \
 FROM joseluisq/static-web-server:2@sha256:63528bfba5d86b00572e23b4e44ed0f7a791f931df650125156d0c24f7a8f877 AS sws
 
 # Final minimal image using distroless static (smaller, no glibc needed)
-FROM gcr.io/distroless/static-debian12:nonroot@sha256:cba10d7abd3e203428e86f5b2d7fd5eb7d8987c387864ae4996cf97191b33764
+FROM gcr.io/distroless/static-debian12:nonroot@sha256:a9329520abc449e3b14d5bc3a6ffae065bdde0f02667fa10880c49b35c109fd1
 
 ARG GITHUB_REPOSITORY
 LABEL org.opencontainers.image.title="CV Site"
