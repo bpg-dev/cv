@@ -1,4 +1,4 @@
-FROM ghcr.io/gohugoio/hugo:v0.156.0@sha256:0b2e5abbe7fd745b1a85cf87dd4d284f6576772de2c104a28c6db67eb6ecc5a5 AS builder
+FROM ghcr.io/gohugoio/hugo:v0.157.0@sha256:7891d7636d357b582576ebb5cdfc990bf514827a6389aec624b12c2126d6127a AS builder
 
 WORKDIR /src
 
