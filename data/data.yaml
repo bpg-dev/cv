@@ -11,8 +11,8 @@ basic:
 
 contact:
   location: Toronto, Canada # location, text or markdown link syntax
-  email: inbox.6y5ib@passmail.net # email address
-  # phone: +1 (416) 720-0726 # phone number, the format is "+[Country Code] [Area Code (if applicable)] [Local Phone Number]"
+  email: contact@boldyrev.me # email address
+  # phone: +1 555 123-4567 # phone number, the format is "+[Country Code] [Area Code (if applicable)] [Local Phone Number]"
   # website: example.com # site link without schema, like example.com, will automatically prepend "https://"
   website: pavel.boldyrev.me
   linkedin: pboldyrev
@@ -25,9 +25,10 @@ profile:
   order: 1
   title: Profile
   description: |
-    Engineer, coach, and mentor with deep expertise in mission-critical payment platforms.
-    Architected and scaled zero-downtime, multi-cloud systems processing billions of transactions annually for tier-one financial institutions (1,500+ TPS).
-    Hands-on contributor to both open-source and enterprise projects, with a track record of mentoring engineers and building high-performing teams.
+    Senior engineer specializing in mission-critical payment platforms.
+    Built core components of zero-downtime, multi-cloud systems processing billions of payment transactions annually for tier-one financial institutions across the UK, US, and Canada.
+    25+ years across payments, cybersecurity, and cloud security; Go-first with deep distributed systems and platform reliability background.
+    Sole maintainer of a widely adopted open-source Terraform provider (10M+ downloads); track record of mentoring engineers and leading high-performing teams.
 
 experience:
   show: true
@@ -39,14 +40,14 @@ experience:
       link: "https://paramountcommerce.com/"
       date: Apr 2025 - present
       role: Senior Software Engineer
-      location: remote
+      location: Toronto / remote
       description: |
         Paramount Commerce is a Toronto-based fintech company specializing in instant, bank account-based payment solutions for iGaming, e-commerce, and digital remittance, with over $100 billion processed to date.
 
-        - Extend the event-driven, cloud-agnostic payment platform using **Golang**, **PostgreSQL**, **CockroachDB**, **Kafka**, **NATS**, and **Dragonfly**.
-        - Drive integrations with tier-one Canadian financial institutions, serving as key technical liaison with banking partners.
-        - Cut CI/CD build times by 40%, improving developer velocity across the team.
-        - Maintain platform availability and reliability through 24/7 on-call rotation.
+        - Core developer on payment gateway integrations with two Tier 1 Canadian banks — first gateway live in production, second in active development. Built authentication, caching, monitoring, and webhook-processing subsystems.
+        - Build and extend the event-driven payment platform using **Golang**, **PostgreSQL**, **CockroachDB**, **Kafka**, **NATS**, and **Dragonfly**.
+        - Cut CI/CD build times by 40% across 30+ services.
+        - Operate 24/7 on-call rotation supporting 99.9% platform uptime.
 
     - company: Form3 Financial Cloud
       link: "https://form3.tech/"
@@ -57,11 +58,11 @@ experience:
         Form3 is a cloud-native platform delivering real-time, account-to-account payment solutions for financial institutions.
         It integrates seamlessly with multiple payment schemes, adheres to evolving regulatory requirements, and scales effortlessly to support customer growth.
 
-        - Built and scaled RESTful backend services in **Golang**, with distributed data layers on **CockroachDB** and **NATS**.
-        - Managed multi-cloud infrastructure (**AWS**, **GCP**, **Azure**) in **Kubernetes** using **Terraform**, **Flux**, and **Helm**.
-        - Streamlined CI/CD with **GitHub Actions**, accelerating deployment velocity.
-        - Led four engineers; drove backlog prioritization and cross-team coordination on platform-wide concerns.
-        - Maintained high availability through 24/7 on-call rotation.
+        - Built core components of the **FedNow** and **TCH-RTP** integrations — including payment recall and reversal subsystems — now live in production.
+        - Designed the idempotency layer enabling at-least-once delivery, improving end-to-end reliability.
+        - Optimized **CockroachDB** access patterns and query latency, sustaining 150 TPS in core components.
+        - Managed multi-cloud infrastructure (**AWS**, **GCP**, **Azure**) on **Kubernetes** with **Terraform**, **Flux**, and **Helm**; streamlined CI/CD on **GitHub Actions**.
+        - Led four engineers; drove backlog prioritization and cross-team coordination.
 
     - company: Arctic Wolf Networks
       link: "https://arcticwolf.com/"
@@ -72,8 +73,8 @@ experience:
         Arctic Wolf Networks is a cybersecurity company providing managed detection and response services.
 
         - Led migration of stateful EC2 backend to **EKS** using **Terraform** and **Python** IaC (ECR, S3, RDS, ElastiCache).
-        - Scaled backend to 10K+ events/sec per node at 99.99% uptime (**Golang**, **PostgreSQL**, **ElastiCache**).
-        - Built CI/CD pipeline for the Arctic Wolf Agent software (**Golang/C**, **Python**, **GitHub Actions**, **Docker**).
+        - Scaled backend to **10K+ events/sec per node at 99.99% uptime** (**Golang**, **PostgreSQL**, **ElastiCache**).
+        - Built CI/CD pipeline for the Arctic Wolf Agent software (**Golang**, **Python**, **GitHub Actions**, **Docker**).
         - Built cross-platform UAT framework, cutting release cycles from weeks to days (**Terraform**, **Packer**).
         - Mentored junior developers on daily work and career growth.
 
@@ -126,6 +127,10 @@ experience:
       date: 2000 - 2012
       role: Software Engineer / Senior Software Engineer / Team Lead
       location: Belarus & Canada
+      description: |
+        - **JVL Corporation** — Team Lead, Casino Class 3 Gaming Platform (Canada)
+        - **NPP Belsoft** (Belarus)
+        - **BelAZ** (Belarus)
 project:
   show: true
   order: 3
@@ -137,7 +142,11 @@ project:
       # tags:
       date: Sep 2021 - present
       description: |
-        Core developer and maintainer of the open-source Terraform provider for managing Proxmox VE environments (1,700+ GitHub stars). Responsible for designing new features, reviewing community contributions, and ensuring project quality and documentation.
+        Core developer and sole maintainer. Revived the project in 2021 after the original authors abandoned it.
+
+        - **1,900+ GitHub stars, 160+ contributors, 10M+ lifetime Terraform Registry downloads** — used widely across homelab and production deployments.
+        - Driving the roadmap toward v1.0 (targeted for 2026); design new features, review community contributions, and own release engineering.
+        - Maintain project documentation, CI, testing, and upgrade paths.
 skill:
   show: true
   order: 4
@@ -180,6 +189,12 @@ skill:
         - Helm
         - Terraform
         - Packer
+    - name: Observability
+      item:
+        - Prometheus
+        - Grafana
+        - Alloy
+        - Loki
     - name: CI/CD Tools
       item:
         - GitHub Actions
@@ -193,35 +208,10 @@ education:
   title: Education
 
   items:
-    - institution: Belarussian National Technical University
+    - institution: Belarusian National Technical University
       date: 1995 - 2000
       major: Software Engineering
       degree: BSc
-certificate:
-  show: true
-  order: 6
-  title: Certificates
-
-  items:
-    - name: Building Scalable Systems
-      issuer: IBM
-      date: 2019
-      link: "https://www.credly.com/badges/2c3da62c-dab5-46f5-b4ab-b1e38ba44c7b"
-    # description: |
-    #   It's my Example Certificate One by Example.
-    - name: Lightbend Reactive Architecture
-      issuer: IBM
-      date: 2019
-      link: https://www.credly.com/badges/c702697c-b578-480b-b774-b9c034197f38
-    # description: |
-    #   It's my Example Certificate Two by Example.
-    - name: Functional Programming in Scala
-      issuer: Coursera
-      date: 2017
-      link: https://www.coursera.org/account/accomplishments/specialization/96M6ZJDGNQSL
-      # description: |
-      #   It's my Example Certificate Two by Example.
-
 language:
   show: true
   order: 11
