@@ -25,9 +25,8 @@ profile:
   order: 1
   title: Profile
   description: |
-    Senior engineer specializing in mission-critical payment platforms.
-    Built core components of zero-downtime, multi-cloud systems processing billions of payment transactions annually for tier-one financial institutions across the UK, US, and Canada.
-    25+ years across payments, cybersecurity, and cloud security; Go-first with deep distributed systems and platform reliability background.
+    Senior engineer with 25+ years across payments, cybersecurity, and cloud security — Go-first, with deep distributed systems and platform reliability background.
+    Built core components of zero-downtime, multi-cloud systems processing billions of transactions annually for tier-one banks in the UK, US, and Canada.
     Sole maintainer of a widely adopted open-source Terraform provider (10M+ downloads); track record of mentoring engineers and leading high-performing teams.
 
 experience:
@@ -42,7 +41,7 @@ experience:
       role: Senior Software Engineer
       location: Toronto / remote
       description: |
-        Paramount Commerce is a Toronto-based fintech company specializing in instant, bank account-based payment solutions for iGaming, e-commerce, and digital remittance, with over $100 billion processed to date.
+        Paramount Commerce is a Toronto-based fintech offering instant bank-to-bank payments for iGaming, e-commerce, and remittance — $100B+ processed to date.
 
         - Core developer on payment gateway integrations with two Tier 1 Canadian banks — first gateway live in production, second in active development. Built authentication, caching, monitoring, and webhook-processing subsystems.
         - Build and extend the event-driven payment platform using **Golang**, **PostgreSQL**, **CockroachDB**, **Kafka**, **NATS**, and **Dragonfly**.
@@ -56,7 +55,6 @@ experience:
       location: remote
       description: |
         Form3 is a cloud-native platform delivering real-time, account-to-account payment solutions for financial institutions.
-        It integrates seamlessly with multiple payment schemes, adheres to evolving regulatory requirements, and scales effortlessly to support customer growth.
 
         - Built core components of the **FedNow** and **TCH-RTP** integrations — including payment recall and reversal subsystems — now live in production.
         - Designed the idempotency layer enabling at-least-once delivery, improving end-to-end reliability.
