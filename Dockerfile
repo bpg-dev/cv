@@ -34,7 +34,7 @@ RUN chmod +x ./scripts/generate-pdf.sh ./scripts/subset-fonts.sh && \
 	./scripts/subset-fonts.sh ./public/assets/fontawesome
 
 # Get static-web-server binary
-FROM joseluisq/static-web-server:2@sha256:2d67e47e22172235e339908777e692006ffdcf42dc4c531aff5d4337a7559a1e AS sws
+FROM joseluisq/static-web-server:2@sha256:6acea6260b14e08dda986361e42640082fbfaab8d88c327de532bb13a3b22994 AS sws
 
 # Final minimal image using distroless static (smaller, no glibc needed)
 FROM gcr.io/distroless/static-debian12:nonroot@sha256:d093aa3e30dbadd3efe1310db061a14da60299baff8450a17fe0ccc514a16639
