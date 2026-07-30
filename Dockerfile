@@ -15,7 +15,7 @@ RUN --mount=type=cache,target=/tmp/hugo_cache \
 	hugo --minify --gc --cacheDir /tmp/hugo_cache
 
 # PDF generation and font optimization stage
-FROM alpine:3.23@sha256:5b10f432ef3da1b8d4c7eb6c487f2f5a8f096bc91145e68878dd4a5019afde11 AS pdf-generator
+FROM alpine:3.23@sha256:fd791d74b68913cbb027c6546007b3f0d3bc45125f797758156952bc2d6daf40 AS pdf-generator
 
 # Chromium for PDF rendering, Python for font subsetting, libwebp for image conversion
 RUN apk add --no-cache chromium busybox-extras py3-pip libwebp-tools && \
