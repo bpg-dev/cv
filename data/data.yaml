@@ -4,7 +4,7 @@ meta:
 
 basic:
   name: Pavel Boldyrev # name
-  title: Senior Software Engineer # job title
+  title: Staff Software Engineer # job title
   avatar:
     show: true # show or hide avatar
     path: /assets/images/profile.jpg # file path or link to your avatar
@@ -25,7 +25,7 @@ profile:
   order: 1
   title: Profile
   description: |
-    Senior engineer with 25+ years across payments, cybersecurity, and cloud security — Go-first, with deep distributed systems and platform reliability background.
+    Staff engineer with 25+ years across payments, cybersecurity, and cloud security — Go-first, with deep distributed systems and platform reliability background.
     Built core components of zero-downtime, multi-cloud systems processing billions of transactions annually for tier-one banks in the UK, US, and Canada.
     Sole maintainer of a widely adopted open-source Terraform provider (10M+ downloads); track record of mentoring engineers and leading high-performing teams.
 
@@ -38,12 +38,13 @@ experience:
     - company: Paramount Commerce
       link: "https://paramountcommerce.com/"
       date: Apr 2025 - present
-      role: Senior Software Engineer
+      role: Staff Software Engineer (Senior Software Engineer, Apr 2025 – Oct 2026)
       location: Toronto / remote
       description: |
         Paramount Commerce is a Toronto-based fintech offering instant bank-to-bank payments for iGaming, e-commerce, and remittance — $100B+ processed to date.
 
-        - Core developer on payment gateway integrations with two Tier 1 Canadian banks — first gateway live in production, second in active development. Built authentication, caching, monitoring, and webhook-processing subsystems.
+        - Lead the technical design of the Tier 1 bank gateway program: payment gateway integrations with two Tier 1 Canadian banks; both gateways are live in production. Built authentication, caching, monitoring, and webhook-processing subsystems.
+        - Set engineering standards and shared platform practices adopted across 30+ services.
         - Build and extend the event-driven payment platform using **Golang**, **PostgreSQL**, **CockroachDB**, **Kafka**, **NATS**, and **Dragonfly**.
         - Cut CI/CD build times by 40% across 30+ services.
         - Operate 24/7 on-call rotation supporting 99.9% platform uptime.
