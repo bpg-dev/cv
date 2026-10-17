@@ -43,10 +43,9 @@ experience:
       description: |
         Paramount Commerce is a Toronto-based fintech offering instant bank-to-bank payments for iGaming, e-commerce, and remittance — $100B+ processed to date.
 
-        - Lead the technical design of the Tier 1 bank gateway program: payment gateway integrations with two Tier 1 Canadian banks; both gateways are live in production. Built authentication, caching, monitoring, and webhook-processing subsystems.
-        - Set engineering standards and shared platform practices adopted across 30+ services.
-        - Build and extend the event-driven payment platform using **Golang**, **PostgreSQL**, **CockroachDB**, **Kafka**, **NATS**, and **Dragonfly**.
-        - Cut CI/CD build times by 40% across 30+ services.
+        - Lead technical design of the Tier 1 bank gateway program: integrations with two Tier 1 Canadian banks, both live in production; built authentication, caching, monitoring, and webhook-processing subsystems.
+        - Set engineering standards and platform practices adopted across 30+ services; cut CI/CD build times by 40%.
+        - Build the event-driven payment platform (**Golang**, **PostgreSQL**, **CockroachDB**, **Kafka**, **NATS**, **Dragonfly**).
         - Operate 24/7 on-call rotation supporting 99.9% platform uptime.
 
     - company: Form3 Financial Cloud
@@ -57,10 +56,10 @@ experience:
       description: |
         Form3 is a cloud-native platform delivering real-time, account-to-account payment solutions for financial institutions.
 
-        - Built core components of the **FedNow** and **TCH-RTP** integrations — including payment recall and reversal subsystems — now live in production.
+        - Built core components of **FedNow** and **TCH-RTP** integrations (payment recall and reversal), now live in production.
         - Designed the idempotency layer enabling at-least-once delivery, improving end-to-end reliability.
         - Optimized **CockroachDB** access patterns and query latency, sustaining 150 TPS in core components.
-        - Managed multi-cloud infrastructure (**AWS**, **GCP**, **Azure**) on **Kubernetes** with **Terraform**, **Flux**, and **Helm**; streamlined CI/CD on **GitHub Actions**.
+        - Managed multi-cloud **Kubernetes** infrastructure (**AWS**, **GCP**, **Azure**) via **Terraform**, **Flux**, **Helm**, and **GitHub Actions**.
         - Led four engineers; drove backlog prioritization and cross-team coordination.
 
     - company: Arctic Wolf Networks
@@ -119,7 +118,7 @@ experience:
       description: |
         Perspecsys was a cloud security startup providing an encryption gateway for SaaS applications.
 
-        - Co-designed and built CDP Gateway core: distributed job engine (**Akka**), encryption (**JCE**), search (**Elasticsearch**), rules engine (**Drools**).
+        - Co-designed and built CDP Gateway core: job engine (**Akka**), encryption (**JCE**), search (**Elasticsearch**), rules (**Drools**).
         - Established team best practices: TDD, code reviews, and quality monitoring (**SonarQube**).
 
     - company: Various companies
@@ -143,8 +142,8 @@ project:
       description: |
         Core developer and sole maintainer. Revived the project in 2021 after the original authors abandoned it.
 
-        - **2,200+ GitHub stars, 190+ contributors, 16M+ lifetime Terraform Registry downloads** — used widely across homelab and production deployments.
-        - Driving the roadmap toward v1.0 (targeted for 2026); design new features, review community contributions, and own release engineering.
+        - **2,200+ GitHub stars, 190+ contributors, 16M+ Terraform Registry downloads**; used in homelab and production.
+        - Driving the roadmap to v1.0 (targeted 2026): design features, review contributions, own release engineering.
         - Maintain project documentation, CI, testing, and upgrade paths.
 skill:
   show: true
