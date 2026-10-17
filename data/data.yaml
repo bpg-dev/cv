@@ -27,7 +27,7 @@ profile:
   description: |
     Staff engineer with 25+ years across payments, cybersecurity, and cloud security — Go-first, with deep distributed systems and platform reliability background.
     Built core components of zero-downtime, multi-cloud systems processing billions of transactions annually for tier-one banks in the UK, US, and Canada.
-    Sole maintainer of a widely adopted open-source Terraform provider (10M+ downloads); track record of mentoring engineers and leading high-performing teams.
+    Sole maintainer of a widely adopted open-source Terraform provider (16M+ downloads); track record of mentoring engineers and leading high-performing teams.
 
 experience:
   show: true
@@ -143,7 +143,7 @@ project:
       description: |
         Core developer and sole maintainer. Revived the project in 2021 after the original authors abandoned it.
 
-        - **1,900+ GitHub stars, 160+ contributors, 10M+ lifetime Terraform Registry downloads** — used widely across homelab and production deployments.
+        - **2,200+ GitHub stars, 190+ contributors, 16M+ lifetime Terraform Registry downloads** — used widely across homelab and production deployments.
         - Driving the roadmap toward v1.0 (targeted for 2026); design new features, review community contributions, and own release engineering.
         - Maintain project documentation, CI, testing, and upgrade paths.
 skill:
