@@ -27,7 +27,7 @@ profile:
   description: |
     Staff engineer with 25+ years across payments, cybersecurity, and cloud security — Go-first, with deep distributed systems and platform reliability background.
     Built core components of zero-downtime, multi-cloud systems processing billions of transactions annually for tier-one banks in the UK, US, and Canada.
-    Sole maintainer of a widely adopted open-source Terraform provider (16M+ downloads); track record of mentoring engineers and leading high-performing teams.
+    Creator and maintainer of bpg/proxmox, the most widely used Terraform provider for Proxmox VE (~700k downloads/month); track record of mentoring engineers and leading high-performing teams.
 
 experience:
   show: true
@@ -140,11 +140,11 @@ project:
       # tags:
       date: Sep 2021 - present
       description: |
-        Core developer and sole maintainer. Revived the project in 2021 after the original authors abandoned it.
+        Creator and maintainer. Forked an abandoned project in 2021 and built it into the standard provider for the platform.
 
-        - **2,200+ GitHub stars, 190+ contributors, 16M+ Terraform Registry downloads**; used in homelab and production.
-        - Driving the roadmap to v1.0 (targeted 2026): design features, review contributions, own release engineering.
-        - Maintain project documentation, CI, testing, and upgrade paths.
+        - **~700k registry downloads/month**, top 1% of 7,000 community providers; current-release download velocity on par with vendor-staffed partner providers (Hetzner, VMware).
+        - **2,200+ GitHub stars, 180+ contributors, 2,000+ merged PRs, 190+ releases** (a release every ~9 days); recommended by Spacelift and the Proxmox community forum.
+        - Driving the roadmap to v1.0 (Plugin Framework migration): design, contribution review, release engineering, ADR-based governance.
 skill:
   show: true
   order: 4
