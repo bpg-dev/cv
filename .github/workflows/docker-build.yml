@@ -66,5 +66,9 @@ jobs:
             type=gha,mode=max
             type=registry,ref=${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:buildcache,mode=max
           platforms: linux/amd64
+          # Push a plain image manifest: no attestation index with untagged
+          # children that GHCR stores as separate package versions
+          provenance: false
+          sbom: false
           build-args: |
             GITHUB_REPOSITORY=${{ github.repository }}
