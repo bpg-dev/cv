@@ -33,6 +33,7 @@ jobs:
       - name: Run cleanup script
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_ACTOR: ${{ github.actor }}
           GITHUB_REPOSITORY: ${{ github.repository }}
           GITHUB_REPOSITORY_OWNER: ${{ github.repository_owner }}
           DRY_RUN: ${{ inputs.dry_run || '0' }}
