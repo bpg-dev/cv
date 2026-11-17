@@ -11,7 +11,8 @@ COPY static/ ./static/
 COPY data/ ./data/
 COPY content/ ./content/
 
-RUN --mount=type=cache,target=/tmp/hugo_cache \
+# Hugo runs as hugo (1000:1000); cache mounts default to root ownership
+RUN --mount=type=cache,target=/tmp/hugo_cache,uid=1000,gid=1000 \
 	hugo --minify --gc --cacheDir /tmp/hugo_cache
 
 # PDF generation and font optimization stage
